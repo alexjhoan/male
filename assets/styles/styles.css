@@ -1,0 +1,553 @@
+@import "fonts.css";
+
+:root {
+  --primary: #47b4a9;
+  --secondary: #0018ab;
+  --text: #12446e;
+  --text-secondary: #425762;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/*--------------------------Tipografy-------------------------*/
+
+h1, p.h1 {
+  font-family: "Roboto";
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text);
+}
+
+h3,
+p.h3 {
+  font-family: "Roboto";
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text);
+}
+
+a,
+span,
+p,
+div,
+input,
+textarea {
+  font-size: 1rem;
+  font-family: "Roboto";
+  color: var(--text-secondary);
+}
+
+/*--------------------------Utilitys-------------------------*/
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/*---------------------------Nav-Bar-------------------------*/
+
+header {
+  height: 64px;
+  padding: 14px 0px;
+  box-sizing: border-box;
+  background-color: #ffffffd0;
+  position: fixed;
+  width: 100%;
+}
+header .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  height: 100%;
+}
+header a.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  height: 100%;
+}
+header a.logo img {
+  max-height: 100%;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+}
+header nav a {
+  padding: 0 15px;
+  border-radius: 10px;
+  transition: all ease 300ms;
+  color: #3d5763;
+}
+header nav a:hover {
+  font-weight: 900;
+}
+#burger {
+  display: none;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#burger div {
+  width: 100%;
+  height: 5px;
+  background-color: #3e5763;
+  border-radius: 1px;
+}
+
+/*-------------------------Old-Styles------------------------*/
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.clear {
+  clear: both;
+}
+
+.left,
+.right {
+  max-width: 49%;
+  flex-basis: 49%;
+  box-sizing: border-box;
+}
+
+/*body {
+  overflow: hidden auto;
+}*/
+
+p.italic {
+  font-size: 30px;
+  line-height: 1.2em;
+  font-style: italic;
+  font-weight: 300;
+}
+
+#portada {
+  padding: 50px 0px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url("https://cdn1.infocasas.com.uy/web/5f47b47942579_infocdn__portada-image.png"),
+    url("https://cdn1.infocasas.com.uy/web/5f47b47604608_infocdn__portada-fondo.png");
+  background-position: left bottom, bottom;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+}
+#portada .container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#portada .container div {
+  width: 50%;
+  max-width: 450px;
+}
+#portada h1 {
+  color: #fff;
+  margin-top: 40px;
+}
+
+a.consultar {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: #889600;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  color: white;
+  border: 2px solid #fff;
+  border-radius: 9px;
+  transition: all ease 300ms;
+}
+a.consultar:hover {
+  background-color: #7a8607;
+}
+a.consultar img {
+  width: 35px;
+  margin-right: 6px;
+}
+#proyecto {
+  padding: 60px 0px;
+}
+#proyecto .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#proyecto h3 {
+  margin-bottom: 20px;
+  color: #3e5763;
+  font-weight: 700;
+}
+#proyecto p {
+  color: #3e5763;
+}
+#proyecto p:nth-child(3) {
+  margin: 60px 0px;
+}
+#proyecto h4 {
+  font-style: italic;
+  font-weight: 600;
+  color: #3d5763;
+}
+
+#ubicacion img {
+  min-height: 290px;
+  object-fit: cover;
+  object-position: right;
+}
+/* unidades */
+#unidades {
+  padding-top: 60px;
+}
+#unidades h1 {
+  margin-bottom: 20px;
+}
+/* amenities */
+#amenities {
+  padding: 60px 0px;
+  background-image: url("https://cdn1.infocasas.com.uy/web/5f47b47784afc_infocdn__amenities-fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#amenities .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#amenities h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+#amenities p {
+  color: #001326;
+}
+#amenities .amenities {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+#amenities .amenities div {
+  flex-basis: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+}
+#amenities .amenities div img {
+  width: 100%;
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+.carousel {
+  margin-top: 30px;
+}
+
+button.glide__arrow.glide__arrow--left {
+  height: 0;
+  width: 0;
+  border: 30px solid transparent;
+  border-right-color: #6ecac3;
+  background-color: transparent;
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  margin-top: -30px;
+  outline: none;
+  cursor: pointer;
+}
+button.glide__arrow.glide__arrow--right {
+  height: 0;
+  width: 0;
+  outline: none;
+
+  border: 30px solid transparent;
+  border-left-color: #6ecac3;
+  background-color: transparent;
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  margin-top: -30px;
+  cursor: pointer;
+}
+
+/* contacto */
+#contacto {
+  padding: 60px 0px;
+  background-image: url("https://cdn1.infocasas.com.uy/web/5f47b47604608_infocdn__portada-fondo.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#contacto .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#contacto h3 {
+  flex-basis: 100%;
+  color: white;
+  margin-bottom: 38px;
+}
+#contacto form input,
+#contacto form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 12px 10px;
+  border: none;
+  outline: none;
+  background: rgb(255 255 255 / 80%);
+  margin-bottom: 10px;
+  display: block;
+  border-radius: 2px;
+}
+#contacto form textarea {
+  height: 100px;
+  max-width: 100%;
+  max-height: 200px;
+}
+#contacto form input.submit {
+  display: inline-block;
+  background-color: #47b4a9;
+  font-size: 20px;
+  padding: 12px 50px;
+  border-radius: 6px;
+  margin-top: 10px;
+  width: auto;
+  cursor: pointer;
+  transition: all ease 300ms;
+}
+#contacto form input.submit:hover {
+  background-color: #38988e;
+}
+#contacto .left p {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+#contacto .right p,
+#contacto .right .wpp {
+  max-width: 320px;
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  font-size: 22px;
+}
+#contacto .right {
+  padding-bottom: 100px;
+}
+#contacto .right p {
+  font-style: italic;
+  font-weight: 200;
+}
+#contacto .right .wpp {
+  margin-top: 35px;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+#contacto .right .wpp img {
+  width: 30px;
+  margin-right: 15px;
+}
+#contacto .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+#contacto .bottom img {
+  max-width: 230px;
+  width: 40%;
+  margin-left: 25px;
+}
+#contacto .bottom img:first-child {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 980px) {
+  a,
+  span,
+  p,
+  div,
+  input,
+  textarea {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  p.italic {
+    font-size: 24px;
+  }
+  .left,
+  .right {
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .container {
+    width: calc(100% - 30px);
+  }
+  header {
+    height: 50px;
+  }
+  header nav {
+    display: none;
+  }
+  header nav.show {
+    display: flex;
+  }
+  header nav {
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    background: white;
+    height: auto;
+    width: 100%;
+    left: 0;
+    border-bottom: 2px solid #3e5763;
+    z-index: 1;
+  }
+  header nav a {
+    border-top: 1px solid #ededed;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0px;
+  }
+  #burger {
+    display: flex;
+  }
+  #portada {
+    min-height: calc(100vh - 50px);
+    padding: 30px 0px;
+    background-size: auto 55%, cover;
+    align-items: flex-start;
+  }
+  #portada .container {
+    align-items: center;
+  }
+  #portada .container div {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #portada h1 {
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  #portada img.logo {
+    width: 90%;
+    max-width: 280px;
+  }
+  #proyecto {
+    padding: 40px 0px;
+  }
+  #proyecto .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  #proyecto .left {
+    margin-top: 30px;
+  }
+  #proyecto p:nth-child(3) {
+    margin: 30px 0px;
+  }
+  /* unidades */
+  #unidades {
+    padding-top: 40px;
+  }
+  button.glide__arrow.glide__arrow--left,
+  button.glide__arrow.glide__arrow--right {
+    border-width: 15px;
+    margin-top: -15px;
+  }
+  /* amenities */
+  #amenities {
+    padding: 40px 0px;
+  }
+  #amenities .container {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  #amenities .left {
+    margin-top: 20px;
+  }
+  #contacto {
+    padding: 40px 0px;
+  }
+  #contacto h3 {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    max-width: 600px;
+  }
+  #contacto .left,
+  #contacto .right,
+  #amenities .left,
+  #amenities .right,
+  #proyecto .left,
+  #proyecto .right {
+    max-width: 600px;
+  }
+  #contacto form input.submit {
+    font-size: 18px;
+  }
+  #contacto .right {
+    text-align: left;
+    padding: 35px 0px;
+  }
+  #contacto .right p {
+    width: 100%;
+    font-size: 20px;
+  }
+  #contacto .right .wpp {
+    font-size: 25px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  #contacto .bottom {
+    margin-top: 10px;
+  }
+}
