@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     menuItems[i].addEventListener("click", toggleMenu);
   }
 
-//   new Glide(".glide", {
-//     type: "slider",
-//     startAt: 0,
-//     keyboard: true,
-//     perView: 1,
-//   }).mount();
-// });
+  // new Glide(".glide", {
+  //   type: "slider",
+  //   startAt: 0,
+  //   keyboard: true,
+  //   perView: 1,
+  // }).mount();
+});
 
 function toggleMenu() {
   const element = document.getElementById("menu");
@@ -83,7 +83,6 @@ function serialize(form) {
       );
     }
   }
-
   return serialized.join("&");
 }
 
