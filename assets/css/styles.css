@@ -27,7 +27,7 @@ h1, p.h1 {
 h3,
 p.h3 {
   font-family: "Roboto";
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 300;
   font-style: italic;
   color: var(--text);
@@ -47,29 +47,74 @@ textarea {
 
 /*--------------------------Utilitys-------------------------*/
 
-.container {
+/*.container {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
+}*/
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.btn-primary {
+.btn.btn-primary {
   background: var(--primary);
   color: #fff;
   border: solid 1px #fff;
-  padding: 8px 24px;
-  font-size: 1.5rem;
+  padding: 13px 24px;
+  font-size: 1.3rem;
   border-radius: 30px;
   font-weight: 100;
+  line-height: 1;
 }
 
-.btn-primary:hover{
-  background: var(--btn-hover);
+.btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
+  box-shadow: none!important;
+  color: #fff!important;
+  border-color: #fff!important;
+  background-color: var(--btn-hover)!important;
 }
 
 .italic {
   font-style: italic;
 }
+
+.subtitleBorder{
+  border-bottom: solid 2px var(--text);
+  width: 7%;
+}
+
+/*
+ menu de movil centrado, una opacidad mas padding de separacion, borde inferior #fff
+
+tamaño de letra lo bonotes mas pequeños en hover, letra del encabezado 2.8rem
+
+en fancy box
+ el hover del boton  escalar la imagen  que los botnoes se pongan mas peuqeñas las letras, en el carousel altyo auto y ancho 100%
+
+  en la portada 
+  las letras que entre con fade y con slide izquierdca y el boton solo son fade-in*/
+
+/*lupa*/
+#units .fancyImgBox .iconImg img:hover {
+    transform: translateY(-3px);
+    transition: ease-in-out .3s;
+}
+
+/*imagen de plano*/
+
+.fancyImgItem img:hover {transform: scale(1.05);transition: ease-in-out .5s;}
+
+.fancyImgItem img {
+    transition: ease-in-out .5s;
+}
+
+/*en carousel
+  no importa el alto solo importa el ancho completo
+*/
+
+
 
 /*---------------------------Nav-Bar-------------------------*/
 
@@ -81,6 +126,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 10;
+  border-bottom: solid 3px var(--primary);
 }
 header .container {
   display: flex;
@@ -147,7 +193,7 @@ section#header p, section#header span {
 section#header p.h1{
   margin-bottom: 5vh;
   color: #fff;
-  line-height: 35px;
+  line-height: 35px; 27px
 }
 
 section#header p.h1:first-of-type span{
@@ -162,7 +208,6 @@ section#header p.h1:last-of-type{
 }
 
 #subHeader {
-  padding: 95px 0px 35px;
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
@@ -175,32 +220,37 @@ section#header p.h1:last-of-type{
 }
 
 #subHeader .container{
-  height: 100%;
-  width: 100%;
+  height: 82vh;
+  width: 90%;
   background: #000000a0;
-  display: grid;
-  grid-template-columns: 46% 54%;
+  margin-top: 50px;
+  max-width: 1200px;
 }
 
 #subHeader .col-left{
-  overflow: hidden;
+  height: 82vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0;
 }
 
 #subHeader .col-left img{
   height: auto;
   width: auto;
-  max-height: 100%;
+  max-height: 82vh;
   max-width: 100%;
 }
 
 #subHeader .col-right{
-  padding: 26px 0;
+  height: 82vh ;
+  padding: 26px 20px;
 }
 
 #subHeader .col-right img{
   height: auto;
   width: 50%;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 #subHeader .col-right p, #subHeader .col-right li, #subHeader .col-right span {
@@ -232,85 +282,134 @@ section#header p.h1:last-of-type{
   font-weight: 500;
 }
 
+/*---------------------------aboutUs-------------------------*/
+
+
+#aboutUs .aboutUsText{
+  padding-left: 8vh;
+  padding-top: 16vh;
+}
+
+#aboutUs .aboutUsText p:not(.h1) {
+    font-size: 1.1rem;
+}
+
+#aboutUs .aboutUsText p.paragraph{
+  margin-bottom: 35px;
+  line-height: 30px;
+  font-size: 1.1rem;
+}
+
+#aboutUs .location p {
+  position: absolute;
+  margin: 0;
+}
+
+#aboutUs .location p.views {
+  right: 2%;
+  font-size: 1.1rem;
+  top: 5%;
+}
+
+#aboutUs .location p.paragraph {
+    left: 10%;
+    top: 18%;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+  
+
+/*--------------------------Units---------------------------*/
+
+#units {
+  padding: 85px 0;
+}
+
+#units .fancyImgBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+#units .fancyImgBox .fancyImgItem {
+  border: solid 4px var(--primary);
+  padding: 30px 0 55px;
+  position: relative;
+}
+
+
+#units .fancyImgBox .iconImg img {
+  height: 28px;
+}
+
+#units .fancyImgBox .iconImg img:hover {
+    transform: translateY(-3px);
+    transition: ease-in-out .3s;
+}
+
+#units  .fancyImgBox .iconImg {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  padding: 8px;
+  border-radius: 13px;
+}
+
+#fancybox-wrap{
+  padding-right: 0;
+}
+
+#units .information {
+  padding-left: 10px;
+}
+
+#units p.titleFancyBox {
+  margin: 15px 0 0px;
+  font-size: 1.6rem;
+}
+
+#units p.subTitleFancyBox {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}
+
+#units ul.listFancyBox {
+  padding-left: 20px;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+
+/*----------------------units-carousels--------------------*/
+
+section#unitsCarousel img{
+  height: calc(100vh - 70px);
+}
+
+.owl-nav button {
+  position: absolute;
+  top: 30.5%;
+  z-index: 10;
+}
+
+.owl-nav button.owl-prev {
+  left: 15px;
+}
+
+.owl-nav button.owl-next {
+  right: 15px;
+}
+
+.owl-nav span {
+  color: #fff;
+  font-size: 6rem;
+}
+
 /*-------------------------Old-Styles------------------------*/
 
-img {
-  max-width: 100%;
-  display: block;
-}
-.clear {
-  clear: both;
-}
 
-.left,
-.right {
-  max-width: 49%;
-  flex-basis: 49%;
-  box-sizing: border-box;
-}
-
-/*body {
-  overflow: hidden auto;
-}*/
-
-p.italic {
-  font-size: 30px;
-  line-height: 1.2em;
-  font-style: italic;
-  font-weight: 300;
-}
-
-a.consultar {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  background: #889600;
-  padding: 10px 12px;
-  display: flex;
-  align-items: center;
-  color: white;
-  border: 2px solid #fff;
-  border-radius: 9px;
-  transition: all ease 300ms;
-}
-a.consultar:hover {
-  background-color: #7a8607;
-}
-a.consultar img {
-  width: 35px;
-  margin-right: 6px;
-}
-#proyecto {
-  padding: 60px 0px;
-}
-#proyecto .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-#proyecto h3 {
-  margin-bottom: 20px;
-  color: #3e5763;
-  font-weight: 700;
-}
-#proyecto p {
-  color: #3e5763;
-}
-#proyecto p:nth-child(3) {
-  margin: 60px 0px;
-}
-#proyecto h4 {
-  font-style: italic;
-  font-weight: 600;
-  color: #3d5763;
-}
-
-#ubicacion img {
-  min-height: 290px;
-  object-fit: cover;
-  object-position: right;
-}
 /* unidades */
 #unidades {
   padding-top: 60px;
@@ -508,6 +607,10 @@ button.glide__arrow.glide__arrow--right {
     align-items: center;
   }
 
+ /* .container {
+    width: calc(100% - 50px);
+  }*/
+
   /*------header-------*/
 
   #header {
@@ -543,9 +646,7 @@ button.glide__arrow.glide__arrow--right {
     flex-basis: 100%;
     max-width: 100%;
   }
-  .container {
-    width: calc(100% - 50px);
-  }
+  
   header {
     height: 50px;
     padding: 10px 0;
