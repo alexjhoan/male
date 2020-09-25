@@ -199,6 +199,48 @@ section#header p.h1:last-of-type{
   font-weight: 700;
 }
 
+#header div#whatsappBtn{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: auto;
+  padding: 0;
+  z-index: 10;
+}
+
+#header div#whatsappBtn a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#header div#whatsappBtn a:hover{
+  text-decoration: none;
+}
+
+#header div#whatsappBtn button {
+  background: #39b44a;
+  border-radius: 100%;
+  padding: 10px;
+  border: none;
+  transform: translateY(6px);
+}
+
+#header div#whatsappBtn button:focus{
+  outline: none;
+}
+
+#header div#whatsappBtn button img {
+  width: 40px;
+}
+
+#header div#whatsappBtn a span{
+  background: var(--primary);
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
 #subHeader {
   box-sizing: border-box;
   height: 100vh;
