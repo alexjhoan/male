@@ -103,8 +103,11 @@ img {
   width: 7%;
 }
 
-
 /*---------------------------Nav-Bar-------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
 
 header {
   height: 70px;
@@ -390,109 +393,98 @@ section#unitsCarousel .owl-nav button {
   z-index: 10;
 }
 
-section#unitsCarousel .owl-nav button:focus{
+#unitsCarousel .owl-nav button:focus{
   outline: none;
 }
 
-section#unitsCarousel .owl-nav button.owl-prev {
+#unitsCarousel .owl-nav button.owl-prev {
   left: 15px;
 }
 
-section#unitsCarousel .owl-nav button.owl-next {
+#unitsCarousel .owl-nav button.owl-next {
   right: 15px;
 }
 
-section#unitsCarousel .owl-nav span {
+#unitsCarousel .owl-nav span {
   color: #fff;
   font-size: 6rem;
 }
 
-/*-------------------------Old-Styles------------------------*/
-
-
-/* unidades */
-#unidades {
-  padding-top: 60px;
-}
-#unidades h1 {
-  margin-bottom: 20px;
-}
-/* amenities */
-#amenities {
-  padding: 60px 0px;
-  background-image: url("https://cdn1.infocasas.com.uy/web/5f47b47784afc_infocdn__amenities-fondo.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#amenities .container {
+#unitsCarousel .owl-dots {
+  position: absolute;
+  bottom: 20px;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: 100%;
 }
-#amenities h1 {
-  color: #fff;
-  margin-bottom: 20px;
+
+section#unitsCarousel .owl-dots button{
+  width: 13px;
+  height: 13px;
+  background: #ffffffb0;
+  margin: 0 5px;
+  border-radius: 100%;
 }
-#amenities p {
-  color: #001326;
+
+section#unitsCarousel .owl-dots button.active{
+  background: #fff;
 }
-#amenities .amenities {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 30px;
+
+section#unitsCarousel .owl-dots button:focus{
+  outline: none;
 }
-#amenities .amenities div {
-  flex-basis: 32%;
+
+/*------------------------Amenities-----------------------*/
+
+section#amenities .facilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#amenities .item {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#amenities .item img{
+  width: 100px;
+}
+
+#amenities .item p {
   text-align: center;
-  margin: 10px 0;
-}
-#amenities .amenities div img {
-  width: 100%;
-  max-width: 80px;
-  margin-bottom: 10px;
-}
-.carousel {
-  margin-top: 30px;
+  font-size: 1.3rem;
 }
 
-button.glide__arrow.glide__arrow--left {
-  display: none;
-  height: 0;
-  width: 0;
-  border: 30px solid transparent;
-  border-right-color: #6ecac3;
-  background-color: transparent;
-  appearance: none;
-  position: absolute;
-  top: 50%;
-  left: 0px;
-  margin-top: -30px;
-  outline: none;
-  cursor: pointer;
+#amenities .rental {
+  margin: 250px 0 100px;
 }
-button.glide__arrow.glide__arrow--right {
-  display: none;
-  height: 0;
-  width: 0;
-  outline: none;
 
-  border: 30px solid transparent;
-  border-left-color: #6ecac3;
-  background-color: transparent;
-  appearance: none;
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  margin-top: -30px;
-  cursor: pointer;
+#amenities .rental .paragraph p{
+  color: var(--text);
 }
+
+#amenities .rental .paragraph p:nth-child(2) {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+#amenities .rental .paragraph p:last-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+
+#amenities .rental .rentalImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*-------------------------Old-Styles------------------------*/
+
 
 /* contacto */
 #contacto {
@@ -645,35 +637,6 @@ button.glide__arrow.glide__arrow--right {
     grid-template-columns: 1fr;
   }
 
-
-  a,
-  span,
-  p,
-  div,
-  input,
-  textarea {
-    font-size: 15px;
-  }
-  h1 {
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 38px;
-  }
-  h3 {
-    font-size: 26px;
-  }
-  h4 {
-    font-size: 22px;
-  }
-  p.italic {
-    font-size: 24px;
-  }
-  .left,
-  .right {
-    width: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
   
   header {
     height: 50px;
