@@ -1,5 +1,25 @@
 @import "fonts.css";
 
+/*
+
+DONE: banner: totalmente blanco e igual fixed
+
+DONE: banner P: letra en 2.8rem
+
+DONE: banner P: las letras que entre con fade y con slide izquierdca y el boton solo son fade-in
+
+DONE: menu movil: menu de movil centrado, una opacidad mas padding de separacion, borde inferior #fff 
+ 
+DONE: botones: tamaño de letra de los botones mas pequeños en hover
+
+DONE: fancy box: el hover del boton acomodar y escalar la imegen 
+
+DONE: Carousel: alto auto y ancho 100% 
+
+TODO: agregar el google analytics 
+
+*/
+
 :root {
   --primary: #47b4a9;
   --secondary: #033545;
@@ -47,12 +67,6 @@ textarea {
 
 /*--------------------------Utilitys-------------------------*/
 
-/*.container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1200px;
-}*/
-
 img {
   max-width: 100%;
   display: block;
@@ -67,6 +81,7 @@ img {
   border-radius: 30px;
   font-weight: 100;
   line-height: 1;
+  transition: ease-in-out .2s;
 }
 
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
@@ -74,6 +89,9 @@ img {
   color: #fff!important;
   border-color: #fff!important;
   background-color: var(--btn-hover)!important;
+  font-size: 1.28rem;
+  /*padding: 13px 29px;*/
+  transition: ease-in-out .3s;
 }
 
 .italic {
@@ -85,36 +103,6 @@ img {
   width: 7%;
 }
 
-/*
- menu de movil centrado, una opacidad mas padding de separacion, borde inferior #fff
-
-tamaño de letra lo bonotes mas pequeños en hover, letra del encabezado 2.8rem
-
-en fancy box
- el hover del boton  escalar la imagen  que los botnoes se pongan mas peuqeñas las letras, en el carousel altyo auto y ancho 100%
-
-  en la portada 
-  las letras que entre con fade y con slide izquierdca y el boton solo son fade-in*/
-
-/*lupa*/
-#units .fancyImgBox .iconImg img:hover {
-    transform: translateY(-3px);
-    transition: ease-in-out .3s;
-}
-
-/*imagen de plano*/
-
-.fancyImgItem img:hover {transform: scale(1.05);transition: ease-in-out .5s;}
-
-.fancyImgItem img {
-    transition: ease-in-out .5s;
-}
-
-/*en carousel
-  no importa el alto solo importa el ancho completo
-*/
-
-
 
 /*---------------------------Nav-Bar-------------------------*/
 
@@ -122,7 +110,7 @@ header {
   height: 70px;
   padding: 16px 0px;
   box-sizing: border-box;
-  background-color: #ffffffe0;
+  background-color: #ffffff;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -191,18 +179,20 @@ section#header p, section#header span {
 }
 
 section#header p.h1{
+  font-size: 2.8rem;
   margin-bottom: 5vh;
   color: #fff;
-  line-height: 35px; 27px
+  line-height: 27px;
 }
 
 section#header p.h1:first-of-type span{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 section#header p.h1:last-of-type{
   margin-bottom: 4vh;
+  line-height: 35px;
   font-style: italic;
   font-weight: 700;
 }
@@ -337,16 +327,26 @@ section#header p.h1:last-of-type{
   border: solid 4px var(--primary);
   padding: 30px 0 55px;
   position: relative;
+  overflow: hidden;
 }
 
+#units .fancyImgItem img.thumbnail {
+  transition: ease-in-out .5s;
+}
+
+#units .fancyImgItem:hover img.thumbnail {
+  transform: scale(1.05);
+  transition: ease-in-out .5s;
+}
 
 #units .fancyImgBox .iconImg img {
   height: 28px;
+  transition: ease-in-out .3s;
 }
 
-#units .fancyImgBox .iconImg img:hover {
-    transform: translateY(-3px);
-    transition: ease-in-out .3s;
+#units .fancyImgBox .iconImg:hover img {
+  transform: translateY(-3px);
+  transition: ease-in-out .3s;
 }
 
 #units  .fancyImgBox .iconImg {
@@ -384,25 +384,25 @@ section#header p.h1:last-of-type{
 
 /*----------------------units-carousels--------------------*/
 
-section#unitsCarousel img{
-  height: calc(100vh - 70px);
-}
-
-.owl-nav button {
+section#unitsCarousel .owl-nav button {
   position: absolute;
-  top: 30.5%;
+  top: 34.5%;
   z-index: 10;
 }
 
-.owl-nav button.owl-prev {
+section#unitsCarousel .owl-nav button:focus{
+  outline: none;
+}
+
+section#unitsCarousel .owl-nav button.owl-prev {
   left: 15px;
 }
 
-.owl-nav button.owl-next {
+section#unitsCarousel .owl-nav button.owl-next {
   right: 15px;
 }
 
-.owl-nav span {
+section#unitsCarousel .owl-nav span {
   color: #fff;
   font-size: 6rem;
 }
@@ -617,6 +617,34 @@ button.glide__arrow.glide__arrow--right {
     background-position: top;
   }
 
+    header {
+      height: 50px;
+      padding: 10px 0;
+    }
+    header nav {
+      display: none;
+    }
+    header nav.show {
+      display: flex;
+    }
+    header nav {
+      position: absolute;
+      top: 100%;
+      flex-direction: column;
+      background: #ffffffe6;
+      height: auto;
+      width: 100%;
+      left: 0;
+      border-bottom: solid 3px var(--primary);
+      z-index: 1;
+    }
+
+  /*-------Units--------*/
+
+  #units .fancyImgBox {
+    grid-template-columns: 1fr;
+  }
+
 
   a,
   span,
@@ -661,18 +689,20 @@ button.glide__arrow.glide__arrow--right {
     position: absolute;
     top: 100%;
     flex-direction: column;
-    background: white;
+    background: #ffffffe6;
     height: auto;
     width: 100%;
     left: 0;
-    border-bottom: 2px solid #3e5763;
+    border-bottom: solid 3px var(--primary);
     z-index: 1;
   }
   header nav a {
-    border-top: 1px solid #ededed;
+    border-top: solid 3px var(--primary);
     width: 100%;
     box-sizing: border-box;
     border-radius: 0px;
+    text-align: center;
+    font-size: 1.2rem;
   }
   #burger {
     display: flex;
@@ -745,4 +775,46 @@ button.glide__arrow.glide__arrow--right {
   #contacto .bottom {
     margin-top: 10px;
   }
+}
+
+/*----------------------animations----------------------*/
+
+@-webkit-keyframes bannerText {
+ 
+from {
+    left: -200px;
+    opacity: 0;
+      }
+to {
+      left: 0;
+      opacity: 1;
+    }
+ }
+
+#bannerText {
+  position: relative;
+  -webkit-animation-name: bannerText;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: right;
+  -webkit-animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes bannerBtn{
+ 
+from {
+    opacity: 0;
+      }
+to {
+    opacity: 1;
+    }
+ }
+
+#bannerBtn {
+  position: relative;
+  -webkit-animation-name: bannerBtn;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: right;
+  -webkit-animation-timing-function: ease-in;
 }
