@@ -1,3 +1,23 @@
+$('[data-fancybox="gallery"]').fancybox({
+  animationEffect: "fade",
+  arrows: false,
+  infobar: false,
+  buttons: [
+    "zoom",
+    "close"
+  ]
+});
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop:true,
+    margin:10,
+    dots: true,
+    nav:true,
+    items:1
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("burger").addEventListener("click", toggleMenu);
   document.getElementById("inputFecha").value = new Date().toLocaleDateString();

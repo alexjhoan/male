@@ -16,7 +16,7 @@ DONE: fancy box: el hover del boton acomodar y escalar la imegen
 
 DONE: Carousel: alto auto y ancho 100% 
 
-TODO: agregar el google analytics 
+DONE: agregar el google analytics 
 
 */
 
@@ -69,7 +69,6 @@ textarea {
 
 img {
   max-width: 100%;
-  display: block;
 }
 
 .btn.btn-primary {
@@ -207,7 +206,6 @@ section#header p.h1:last-of-type{
   display: flex;
   align-items: center;
   background-image: url("../images/water.jpg");
-  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -483,110 +481,72 @@ section#amenities .facilities {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/*-------------------------Old-Styles------------------------*/
+/*--------------------------Contact-----------------------------*/
 
-
-/* contacto */
 #contacto {
-  padding: 60px 0px;
-  background-image: url("https://cdn1.infocasas.com.uy/web/5f47b47604608_infocdn__portada-fondo.png");
-  background-position: bottom;
+  /*min-height: 100vh;*/
+  background: linear-gradient(#000000a0 100%, #000000a0 100%), url(../images/water.jpg);;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 #contacto .container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
-#contacto h3 {
-  flex-basis: 100%;
-  color: white;
-  margin-bottom: 38px;
+
+#contacto p, #contacto a {
+  color: #fff;
 }
-#contacto form input,
-#contacto form textarea {
-  width: 100%;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 12px 10px;
-  border: none;
-  outline: none;
-  background: rgb(255 255 255 / 80%);
-  margin-bottom: 10px;
-  display: block;
-  border-radius: 2px;
+
+#contacto .left form .form-control {
+  background-color: #ffffffd6;
+  transition: all ease-in-out .3s;
 }
-#contacto form textarea {
-  height: 100px;
-  max-width: 100%;
-  max-height: 200px;
+
+#contacto .left form .form-control:focus {
+  background-color: #ffffff;
 }
-#contacto form input.submit {
-  display: inline-block;
-  background-color: #47b4a9;
-  font-size: 20px;
-  padding: 12px 50px;
-  border-radius: 6px;
-  margin-top: 10px;
-  width: auto;
-  cursor: pointer;
-  transition: all ease 300ms;
-}
-#contacto form input.submit:hover {
-  background-color: #38988e;
-}
-#contacto .left p {
-  font-size: 28px;
-  line-height: 32px;
-  font-weight: 400;
-  color: white;
-  text-align: center;
-}
-#contacto .right p,
-#contacto .right .wpp {
-  max-width: 320px;
-  width: 90%;
-  margin: 0 auto;
-  color: white;
-  font-size: 22px;
-}
-#contacto .right {
-  padding-bottom: 100px;
-}
-#contacto .right p {
-  font-style: italic;
-  font-weight: 200;
-}
-#contacto .right .wpp {
-  margin-top: 35px;
-  text-align: center;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-}
-#contacto .right .wpp img {
-  width: 30px;
-  margin-right: 15px;
-}
-#contacto .bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 25px;
-}
-#contacto .bottom img {
-  max-width: 230px;
+
+#contacto .left form button{
   width: 40%;
-  margin-left: 25px;
+  margin-top: 15px;
 }
-#contacto .bottom img:first-child {
-  margin-left: 0px;
+
+#contacto .left p {
+  font-size: 2.8rem;
+  margin-bottom: 35px;
+}
+
+#contacto .right, #contacto .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contacto .right p, #contacto .right a{
+  text-align: center;
+}
+#contacto .right img {
+    width: 35px;
+}
+
+.footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.footer img {
+  height: 40px;
+  padding: 0 20px;
+}
+
+#contacto .container .row:not(.footer) {
+  padding-top: 100px;
 }
 
 /*---------------------Querys--------------------*/

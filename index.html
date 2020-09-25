@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+      })(window,document,'script','dataLayer','GTM-5CSHQRF');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -26,6 +37,10 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CSHQRF"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
       <div class="container">
         <a href="/" class="logo">
@@ -312,83 +327,56 @@
     </section>
     <section id="contacto">
       <div class="container">
-        <h3>Dejanos tu consulta</h3>
-        <div class="left">
-          <form action="javascript:void(0);" onsubmit="submited()">
-            <input type="hidden" name="IDform" value="447" />
-            <input type="hidden" name="IDpais" value="2" />
-            <input type="hidden" name="fecha" id="inputFecha" />
-            <input type="text" name="nombre" placeholder="Nombre *" required />
-            <input type="email" name="email" placeholder="Email *" required />
-            <input type="tel" name="tel" placeholder="Teléfono *" required />
-            <textarea name="extra" placeholder="Consulta *" required></textarea>
-            <input type="submit" value="Enviar" class="submit" />
-          </form>
+        <div class="row">
+          <div class="col-12 col-md-6 left">
+            <p class="h1">Dejanos tu consulta</p>
+            <form action="javascript:void(0);" onsubmit="submited()">
+               <div class="form-group">
+                <input type="hidden" class="form-control" name="IDform" value="447" />
+                <input type="hidden" class="form-control" name="IDpais" value="2" />
+                <input type="hidden" class="form-control" name="fecha" id="inputFecha" />
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre *" required />
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email *" required />
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" name="tel" placeholder="Teléfono *" required />
+              </div>
+              <div class="form-group">
+                <textarea name="extra" class="form-control" placeholder="Consulta *" rows="5" required></textarea>
+              </div>
+                <button type="submit" class="submit btn btn-primary">Enviar</button>
+            </form>
+          </div>
+          <div class="col-12 col-md-6 right">
+            <p class="h3 mb-5">Oficinas para trato personalizado en Argentina, Uruguay y Paraguay</p>
+            <a class="wpp h1"
+              href="https://api.whatsapp.com/send?phone=59897134559&text=Hola,%20estoy%20interesado%20en%20el%20nuevo%20lanzamiento%20Mal%C3%A9!%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n.">
+              <img src="assets/images/icons/icon-whatsapp.png"
+                alt="wpp" />
+              +598 97 134 559
+            </a>
+          </div>
         </div>
-        <div class="right">
-          <p>
-            Oficinas para trato personalizado en Argentina, Uruguay y Paraguay
-          </p>
-          <a
-            class="wpp"
-            href="https://wa.me/59897134559?text=Hola%2C%20estoy%20interesado%20en%20el%20nuevo%20lanzamiento%20Mal%C3%A9%21%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n."
-          >
+        <div class="row footer">
+          <div class="col-12">
             <img
-              src="https://cdn1.infocasas.com.uy/web/5f47b47310f2b_infocdn__icon-wpp.png"
-              alt="wpp"
+              src="assets/images/male-white.png"
+              alt="Male Asunción"
             />
-            +598 97 134 559
-          </a>
-        </div>
-        <div class="bottom">
-          <img
-            src="https://cdn1.infocasas.com.uy/web/5f47b47508bfe_infocdn__logo-male-asuncion.png"
-            alt="Male Asunción"
-          />
-          <img
-            src="https://cdn1.infocasas.com.uy/web/5f47b4737731d_infocdn__logo-continents.png"
-            alt="Continents"
-          />
+            <img
+              src="assets/images/continents.png"
+              alt="Continents"
+            />
+          </div>
         </div>
       </div>
     </section>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-54487618-28"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-54487618-28");
-    </script>
     <script src="assets/js/jquery/jquery.min.js"></script>
     <script src="assets/js/owl-carousel/owl.carousel.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <script src="assets/js/fancy-box/jquery.fancybox.min.js"></script>
-    <script>
-      $('[data-fancybox="gallery"]').fancybox({
-        animationEffect: "fade",
-        arrows: false,
-        infobar: false,
-        buttons: [
-          "zoom",
-          "close"
-        ]
-      });
-
-      $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-          loop:true,
-          margin:10,
-          dots: true,
-          nav:true,
-          items:1
-        });
-      });
-    </script>
-    <!-- <script src="assets/js/index.js"></script> -->
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
