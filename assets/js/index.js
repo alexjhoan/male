@@ -79,8 +79,9 @@ function submited() {
     function () {
       var anchor = document.querySelector("#contacto .left");
       var myText = document.createElement("p");
-      form.style = "display:none";
-      myText.innerHTML = "¡Consuta Enviada Exitosamente!";
+      myText.style = "h3"
+      form.style = "display:none; text-align: center;";
+      myText.innerHTML = "¡Consulta enviada con éxito!<br />En breve un asesor se comunicará contigo.";
       anchor.appendChild(myText);
       gtag("event", "form_submit_complete", {
         event_label: "consulta",

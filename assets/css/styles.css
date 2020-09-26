@@ -22,23 +22,23 @@ DONE: Carousel: alto auto y ancho 100%
 
 DONE: agregar el google analytics 
 
-TODO: contacto: mensaje enviado: Poner más chiquito ese texto, del tamaño que está "oficinas para trato....". Cambiarlo por : ¡Consulta enviada con éxito! En breve un asesor se comunicará contigo.
+NOTE: VERIFICAR: contacto: mensaje enviado: Poner más chiquito ese texto, del tamaño que está "oficinas para trato....". Cambiarlo por : ¡Consulta enviada con éxito! En breve un asesor se comunicará contigo.
 
-TODO: Animación del principio: está muy muy lenta
+DONE: Animación del principio: está muy muy lenta
 
-TODO: Amenities: quitarle un poquito de interlineado a la frase de Diseñamos exclusivos servicios
+DONE: Amenities: quitarle un poquito de interlineado a la frase de Diseñamos exclusivos servicios
 
-TODO: Amenities: quitarle un poquito de interlineado a los textos de los iconos
+DONE: Amenities: quitarle un poquito de interlineado a los textos de los iconos
 
-TODO: Amenities2: alinear los iconos a la izquierda donde empiezan las frases.
+DONE: Amenities2: alinear los iconos a la izquierda donde empiezan las frases.
 
-TODO: Amenities2: el botón centrado.
+DONE: Units: el botón centrado.
 
 TODO: subheader: el botón dentro de lo azul.
 
-TODO: text menu: y le sacaría el subrayado y el azul, solo cambiar a bold cuando está en hover pero que conserve el color
+DONE: text menu: y le sacaría el subrayado y el azul, solo cambiar a bold cuando está en hover pero que conserve el color
 
-TODO: banner: y por último, dar más interlineado al 2do texto
+DONE: banner: dar más interlineado al 2do texto
 
 */
 
@@ -167,6 +167,8 @@ header nav a {
 }
 header nav a:hover {
   font-weight: 900;
+  text-decoration: none;
+  color: var(--text-secondary)
 }
 #burger {
   display: none;
@@ -216,7 +218,7 @@ section#header p.h1:first-of-type span{
 
 section#header p.h1:last-of-type{
   margin-bottom: 4vh;
-  line-height: 35px;
+  line-height: 45px;
   font-style: italic;
   font-weight: 700;
 }
@@ -527,6 +529,7 @@ section#amenities .facilities {
 #amenities .item p {
   text-align: center;
   font-size: 1.3rem;
+  line-height: 25px;
 }
 
 #amenities .rental {
@@ -545,13 +548,23 @@ section#amenities .facilities {
 #amenities .rental .paragraph p:last-child {
   font-size: 1.5rem;
   font-weight: 600;
+  line-height: 26px; 
   color: var(--text-secondary);
+  margin-bottom: 40px;
 }
 
 
 #amenities .rental .rentalImg {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+#amenities .rental .rentalImg .item{
+  align-items: flex-start;
+}
+
+#amenities .rental .rentalImg p{
+  width: fit-content;
 }
 
 /*--------------------------Contact-----------------------------*/
@@ -791,7 +804,7 @@ to {
 #bannerText {
   position: relative;
   -webkit-animation-name: bannerText;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-direction: right;
   -webkit-animation-timing-function: ease-in;
