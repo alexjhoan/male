@@ -2,6 +2,10 @@
 
 /*
 
+si la altura del contenedor es mayor a escrol no funciona
+
+si la altura es mayor que la altura de los componentes anteriores funciona
+
 DONE: banner: totalmente blanco e igual fixed
 
 DONE: banner P: letra en 2.8rem
@@ -17,6 +21,24 @@ DONE: fancy box: el hover del boton acomodar y escalar la imegen
 DONE: Carousel: alto auto y ancho 100% 
 
 DONE: agregar el google analytics 
+
+TODO: contacto: mensaje enviado: Poner más chiquito ese texto, del tamaño que está "oficinas para trato....". Cambiarlo por : ¡Consulta enviada con éxito! En breve un asesor se comunicará contigo.
+
+TODO: Animación del principio: está muy muy lenta
+
+TODO: Amenities: quitarle un poquito de interlineado a la frase de Diseñamos exclusivos servicios
+
+TODO: Amenities: quitarle un poquito de interlineado a los textos de los iconos
+
+TODO: Amenities2: alinear los iconos a la izquierda donde empiezan las frases.
+
+TODO: Amenities2: el botón centrado.
+
+TODO: subheader: el botón dentro de lo azul.
+
+TODO: text menu: y le sacaría el subrayado y el azul, solo cambiar a bold cuando está en hover pero que conserve el color
+
+TODO: banner: y por último, dar más interlineado al 2do texto
 
 */
 
@@ -250,6 +272,7 @@ section#header p.h1:last-of-type{
   background-image: url("../images/water.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #subHeader .container{
@@ -317,6 +340,11 @@ section#header p.h1:last-of-type{
 
 /*---------------------------aboutUs-------------------------*/
 
+section#aboutUs {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
 
 #aboutUs .aboutUsText{
   padding-left: 8vh;
@@ -324,7 +352,7 @@ section#header p.h1:last-of-type{
 }
 
 #aboutUs .aboutUsText p:not(.h1) {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 #aboutUs .aboutUsText p.paragraph{
@@ -333,22 +361,25 @@ section#header p.h1:last-of-type{
   font-size: 1.1rem;
 }
 
-#aboutUs .location p {
+/*---------------------------location-------------------------*/
+
+#location p {
   position: absolute;
   margin: 0;
+  z-index: 1;
 }
 
-#aboutUs .location p.views {
+#location p.views {
   right: 2%;
   font-size: 1.1rem;
   top: 5%;
 }
 
-#aboutUs .location p.paragraph {
-    left: 10%;
-    top: 18%;
-    font-size: 1.8rem;
-    font-weight: 600;
+#location p.paragraph {
+  left: 10%;
+  top: 18%;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
   
 
@@ -526,10 +557,11 @@ section#amenities .facilities {
 /*--------------------------Contact-----------------------------*/
 
 #contacto {
-  /*min-height: 100vh;*/
+  min-height: 100vh;
   background: linear-gradient(#000000a0 100%, #000000a0 100%), url(../images/water.jpg);;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #contacto .container {

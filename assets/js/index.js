@@ -1,3 +1,5 @@
+// fancyBox
+
 $('[data-fancybox="gallery"]').fancybox({
   animationEffect: "fade",
   arrows: false,
@@ -7,6 +9,8 @@ $('[data-fancybox="gallery"]').fancybox({
     "close"
   ]
 });
+
+// OwlCarousel
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
@@ -18,6 +22,38 @@ $(document).ready(function(){
   });
 });
 
+// parallax efects
+
+$(function() {
+  $(window).scroll(function() {
+    let alturaHeader = $('#header').height()
+    let myscroll = $(window).scrollTop()
+    if (myscroll < alturaHeader ){
+      let el = $('#header');
+      var scroll = $(document).scrollTop();
+      el.css({'background-position':'50% calc(30% + '+(.4*scroll)+'px)'});
+    }
+  });
+});
+
+$(function() {
+  $(window).scroll(function() {
+    let altura1 = $('#header').height()
+    let altura2 = $('#subHeader').height()
+    let altura3 = $('#aboutUs').height()
+    let alturaTotal = altura1 + altura2
+    let myscroll = $(window).scrollTop()
+    if (myscroll > alturaTotal ){
+      let el = $('#highView');
+      var scroll = $(document).scrollTop() - alturaTotal
+      let scroll2 = scroll - altura3
+      el.css({
+        'transform':'translateY('+(.4*scroll2)+'px)'
+      });
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("burger").addEventListener("click", toggleMenu);
   document.getElementById("inputFecha").value = new Date().toLocaleDateString();
@@ -26,13 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
   for (var i = 0; i < menuItems.length; i++) {
     menuItems[i].addEventListener("click", toggleMenu);
   }
-
-  // new Glide(".glide", {
-  //   type: "slider",
-  //   startAt: 0,
-  //   keyboard: true,
-  //   perView: 1,
-  // }).mount();
 });
 
 function toggleMenu() {
