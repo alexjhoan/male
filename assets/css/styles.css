@@ -340,24 +340,25 @@ section#header p.h1:last-of-type{
   font-weight: 500;
 }
 
-/*---------------------------aboutUs-------------------------*/
+/*---------------------------project-------------------------*/
 
-section#aboutUs {
-    position: relative;
-    z-index: 1;
-    background: #fff;
+section#project {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding-top: 30px;
 }
 
-#aboutUs .aboutUsText{
+#project .projectText{
   padding-left: 8vh;
   padding-top: 16vh;
 }
 
-#aboutUs .aboutUsText p:not(.h1) {
+#project .projectText p:not(.h1) {
   font-size: 1.1rem;
 }
 
-#aboutUs .aboutUsText p.paragraph{
+#project .projectText p.paragraph{
   margin-bottom: 35px;
   line-height: 30px;
   font-size: 1.1rem;
@@ -584,7 +585,7 @@ section#amenities .facilities {
   min-height: 100vh;
 }
 
-#contacto p, #contacto a {
+#contacto p, #contacto a, #contacto h3 {
   color: #fff;
 }
 
@@ -607,6 +608,12 @@ section#amenities .facilities {
   margin-bottom: 35px;
 }
 
+#contacto .left h3 {
+  text-align: center;
+  min-height: 368px;
+  padding-top: 60px;
+}
+
 #contacto .right, #contacto .left {
   display: flex;
   flex-direction: column;
@@ -616,8 +623,13 @@ section#amenities .facilities {
 #contacto .right p, #contacto .right a{
   text-align: center;
 }
+
+#contacto .right a:hover{
+  text-decoration: none;
+}
+
 #contacto .right img {
-    width: 35px;
+  width: 35px;
 }
 
 .footer > div {
