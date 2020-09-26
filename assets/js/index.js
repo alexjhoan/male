@@ -77,10 +77,10 @@ function submited() {
     "https://www.infocasas.com.uy/?mid=formulario&func=ajax_save",
     data,
     function () {
-      var anchor = document.querySelector("#contacto .left");
-      var myText = document.createElement("p");
-      myText.style = "h3"
-      form.style = "display:none; text-align: center;";
+     var anchor = document.querySelector("#contacto .left");
+      var myText = document.createElement("h3");
+      myText.style = "text-align: center";
+      form.style = "display:none";
       myText.innerHTML = "¡Consulta enviada con éxito!<br />En breve un asesor se comunicará contigo.";
       anchor.appendChild(myText);
       gtag("event", "form_submit_complete", {
