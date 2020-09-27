@@ -724,6 +724,9 @@ section#amenities .facilities {
   #header div#whatsappBtn button img {
       width: 30px;
   }
+  #subHeader, #subHeader .container, #subHeader .col-left, #subHeader .col-right {
+    min-height: auto;
+  }
   #location p.paragraph {
     font-size: 1.6rem;
   }
@@ -740,6 +743,15 @@ section#amenities .facilities {
   #amenities .rental {
     margin: 100px 0;
   }
+  #amenities .rental .rentalImg .item:first-child p {
+    margin-left: 6px;
+  }
+  #amenities .rental .rentalImg .item:nth-child(2) p {
+    margin-left: 10px;
+  }
+  #amenities .rental .rentalImg .item:last-child p {
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -755,7 +767,7 @@ section#amenities .facilities {
   }
   #units .fancyImgBox div.fancyBox:not(:first-child) {
     padding-top: 50px;
-  }  
+  }
   #contacto .container .row:not(.footer) {
     padding-top: 0px;
   }
@@ -843,6 +855,9 @@ section#amenities .facilities {
     font-size: 1.3rem;
     line-height: 20px;
   }
+  #amenities .rental .rentalImg .item p {
+    margin-left: 0!important;
+  }
   #amenities .rental .rentalImg .item:first-child img {
     margin-left: 4px;
   }
@@ -854,6 +869,9 @@ section#amenities .facilities {
   }
   #contacto .left p {
     font-size: 2.3rem;
+  }
+  .footer > div {
+    margin-bottom: 80px;
   }
   .footer img {
     height: 20px;
