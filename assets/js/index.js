@@ -36,23 +36,77 @@ $(function() {
   });
 });
 
-$(function() {
-  $(window).scroll(function() {
-    let altura1 = $('#header').height()
-    let altura2 = $('#subHeader').height()
-    let altura3 = $('#aboutUs').height()
-    let alturaTotal = altura1 + altura2
-    let myscroll = $(window).scrollTop()
-    if (myscroll > alturaTotal ){
-      let el = $('#highView');
-      var scroll = $(document).scrollTop() - alturaTotal
-      let scroll2 = scroll - altura3
-      el.css({
-        'transform':'translateY('+(.4*scroll2)+'px)'
+
+
+function imgParallax() {
+  let checkWidth = jQuery(window).width();
+  if (window.innerWidth > 768) {
+    $(function() {
+      $(window).scroll(function() {
+        let altura1 = $('#header').height()
+        let altura2 = $('#subHeader').height()
+        let altura3 = $('#project').height()
+        let alturaTotal = altura1 + altura2
+        let myscroll = $(window).scrollTop()
+        if (myscroll > alturaTotal ){
+          let el = $('#highView');
+          var scroll = $(document).scrollTop() - alturaTotal
+          let scroll2 = scroll - altura3
+          el.css({
+            'transform':'translateY('+(.4*scroll2)+'px)'
+          });
+        }
       });
-    }
-  });
-});
+    });
+  }
+
+  if (window.matchMedia("(min-width: 576px) and (max-width: 767px)").matches) {
+    $(function() {
+      $(window).scroll(function() {
+        let altura1 = $('#header').height()
+        let altura2 = $('#subHeader').height()
+        let altura3 = $('#project').height()
+        let alturaTotal = altura1 + altura2
+        let myscroll = $(window).scrollTop()
+        if (myscroll > alturaTotal ){
+          let el = $('#highView');
+          var scroll = $(document).scrollTop() - alturaTotal
+          let scroll2 = scroll - altura3
+          el.css({
+            'transform':'translate(15%, '+(.4*scroll2)+'px) scale(1.5)'
+          });
+        }
+      });
+    });
+  }
+
+  if (window.innerWidth < 576) {
+    $(function() {
+      $(window).scroll(function() {
+        let altura1 = $('#header').height()
+        let altura2 = $('#subHeader').height()
+        let altura3 = $('#project').height()
+        let alturaTotal = altura1 + altura2
+        let myscroll = $(window).scrollTop()
+        if (myscroll > alturaTotal ){
+          let el = $('#highView');
+          var scroll = $(document).scrollTop() - alturaTotal
+          let scroll2 = scroll - altura3 + 140
+          el.css({
+            'transform':'translate(30%, '+(.4*scroll2)+'px) scale(1.85)'
+          });
+        }
+      });
+    });
+  }
+}
+
+
+  imgParallax()
+  jQuery(window).resize(imgParallax);
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("burger").addEventListener("click", toggleMenu);

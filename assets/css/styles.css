@@ -22,7 +22,7 @@ DONE: Carousel: alto auto y ancho 100%
 
 DONE: agregar el google analytics 
 
-NOTE: VERIFICAR: contacto: mensaje enviado: Poner más chiquito ese texto, del tamaño que está "oficinas para trato....". Cambiarlo por : ¡Consulta enviada con éxito! En breve un asesor se comunicará contigo.
+DONE: VERIFICAR: contacto: mensaje enviado: Poner más chiquito ese texto, del tamaño que está "oficinas para trato....". Cambiarlo por : ¡Consulta enviada con éxito! En breve un asesor se comunicará contigo.
 
 DONE: Animación del principio: está muy muy lenta
 
@@ -59,7 +59,8 @@ DONE: banner: dar más interlineado al 2do texto
 
 /*--------------------------Tipografy-------------------------*/
 
-h1, p.h1 {
+h1,
+p.h1 {
   font-family: "Roboto";
   font-size: 2.2rem;
   font-weight: 900;
@@ -102,24 +103,26 @@ img {
   border-radius: 30px;
   font-weight: 100;
   line-height: 1;
-  transition: ease-in-out .2s;
+  transition: ease-in-out 0.2s;
 }
 
-.btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
-  box-shadow: none!important;
-  color: #fff!important;
-  border-color: #fff!important;
-  background-color: var(--btn-hover)!important;
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+  box-shadow: none !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  background-color: var(--btn-hover) !important;
   font-size: 1.28rem;
   /*padding: 13px 29px;*/
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 .italic {
   font-style: italic;
 }
 
-.subtitleBorder{
+.subtitleBorder {
   border-bottom: solid 2px var(--text);
   width: 7%;
 }
@@ -168,7 +171,7 @@ header nav a {
 header nav a:hover {
   font-weight: 900;
   text-decoration: none;
-  color: var(--text-secondary)
+  color: var(--text-secondary);
 }
 #burger {
   display: none;
@@ -200,30 +203,31 @@ header nav a:hover {
   background-repeat: no-repeat;
 }
 
-section#header p, section#header span {
+section#header p,
+section#header span {
   color: #fff;
 }
 
-section#header p.h1{
+section#header p.h1 {
   font-size: 2.8rem;
   margin-bottom: 5vh;
   color: #fff;
   line-height: 27px;
 }
 
-section#header p.h1:first-of-type span{
+section#header p.h1:first-of-type span {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-section#header p.h1:last-of-type{
+section#header p.h1:last-of-type {
   margin-bottom: 4vh;
   line-height: 45px;
   font-style: italic;
   font-weight: 700;
 }
 
-#header div#whatsappBtn{
+#header div#whatsappBtn {
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -232,14 +236,14 @@ section#header p.h1:last-of-type{
   z-index: 10;
 }
 
-#header div#whatsappBtn a{
+#header div#whatsappBtn a {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#header div#whatsappBtn a:hover{
+#header div#whatsappBtn a:hover {
   text-decoration: none;
 }
 
@@ -251,7 +255,7 @@ section#header p.h1:last-of-type{
   transform: translateY(6px);
 }
 
-#header div#whatsappBtn button:focus{
+#header div#whatsappBtn button:focus {
   outline: none;
 }
 
@@ -259,7 +263,7 @@ section#header p.h1:last-of-type{
   width: 40px;
 }
 
-#header div#whatsappBtn a span{
+#header div#whatsappBtn a span {
   background: var(--primary);
   padding: 6px 10px;
   font-size: 14px;
@@ -267,7 +271,7 @@ section#header p.h1:last-of-type{
 
 #subHeader {
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -277,41 +281,43 @@ section#header p.h1:last-of-type{
   background-attachment: fixed;
 }
 
-#subHeader .container{
-  height: 82vh;
+#subHeader .container {
+  min-height: 82vh;
   width: 90%;
   background: #000000a0;
-  margin-top: 50px;
+  margin: 50px auto;
   max-width: 1200px;
 }
 
-#subHeader .col-left{
-  height: 82vh;
+#subHeader .col-left {
+  min-height: 82vh;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   padding: 0;
 }
 
-#subHeader .col-left img{
+#subHeader .col-left img {
   height: auto;
   width: auto;
   max-height: 82vh;
   max-width: 100%;
 }
 
-#subHeader .col-right{
-  height: 82vh ;
+#subHeader .col-right {
+  min-height: 82vh;
   padding: 26px 20px;
 }
 
-#subHeader .col-right img{
+#subHeader .col-right img {
   height: auto;
   width: 50%;
   margin-bottom: 20px;
 }
 
-#subHeader .col-right p, #subHeader .col-right li, #subHeader .col-right span {
+#subHeader .col-right p,
+#subHeader .col-right li,
+#subHeader .col-right span {
   color: #fff;
 }
 
@@ -349,7 +355,7 @@ section#project {
   padding-top: 30px;
 }
 
-#project .projectText{
+#project .projectText {
   padding-left: 8vh;
   padding-top: 16vh;
 }
@@ -358,7 +364,7 @@ section#project {
   font-size: 1.1rem;
 }
 
-#project .projectText p.paragraph{
+#project .projectText p.paragraph {
   margin-bottom: 35px;
   line-height: 30px;
   font-size: 1.1rem;
@@ -372,6 +378,11 @@ section#project {
   z-index: 1;
 }
 
+#location .container-highView{
+  max-width: 100%;
+  overflow: hidden;
+}
+
 #location p.views {
   right: 2%;
   font-size: 1.1rem;
@@ -379,17 +390,19 @@ section#project {
 }
 
 #location p.paragraph {
-  left: 10%;
-  top: 18%;
+  left: 8%;
+  top: 16%;
   font-size: 1.8rem;
   font-weight: 600;
 }
-  
 
 /*--------------------------Units---------------------------*/
 
 #units {
   padding: 85px 0;
+  background: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 #units .fancyImgBox {
@@ -408,25 +421,25 @@ section#project {
 }
 
 #units .fancyImgItem img.thumbnail {
-  transition: ease-in-out .5s;
+  transition: ease-in-out 0.5s;
 }
 
 #units .fancyImgItem:hover img.thumbnail {
   transform: scale(1.05);
-  transition: ease-in-out .5s;
+  transition: ease-in-out 0.5s;
 }
 
 #units .fancyImgBox .iconImg img {
   height: 28px;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 #units .fancyImgBox .iconImg:hover img {
   transform: translateY(-3px);
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
-#units  .fancyImgBox .iconImg {
+#units .fancyImgBox .iconImg {
   position: absolute;
   bottom: 7px;
   right: 7px;
@@ -434,7 +447,7 @@ section#project {
   border-radius: 13px;
 }
 
-#fancybox-wrap{
+#fancybox-wrap {
   padding-right: 0;
 }
 
@@ -467,7 +480,7 @@ section#unitsCarousel .owl-nav button {
   z-index: 10;
 }
 
-#unitsCarousel .owl-nav button:focus{
+#unitsCarousel .owl-nav button:focus {
   outline: none;
 }
 
@@ -494,7 +507,7 @@ section#unitsCarousel .owl-nav button {
   width: 100%;
 }
 
-section#unitsCarousel .owl-dots button{
+section#unitsCarousel .owl-dots button {
   width: 13px;
   height: 13px;
   background: #ffffffb0;
@@ -502,11 +515,11 @@ section#unitsCarousel .owl-dots button{
   border-radius: 100%;
 }
 
-section#unitsCarousel .owl-dots button.active{
+section#unitsCarousel .owl-dots button.active {
   background: #fff;
 }
 
-section#unitsCarousel .owl-dots button:focus{
+section#unitsCarousel .owl-dots button:focus {
   outline: none;
 }
 
@@ -523,7 +536,7 @@ section#amenities .facilities {
   align-items: center;
 }
 
-#amenities .item img{
+#amenities .item img {
   width: 100px;
 }
 
@@ -537,7 +550,7 @@ section#amenities .facilities {
   margin: 250px 0 100px;
 }
 
-#amenities .rental .paragraph p{
+#amenities .rental .paragraph p {
   color: var(--text);
 }
 
@@ -549,22 +562,21 @@ section#amenities .facilities {
 #amenities .rental .paragraph p:last-child {
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 26px; 
+  line-height: 26px;
   color: var(--text-secondary);
   margin-bottom: 40px;
 }
-
 
 #amenities .rental .rentalImg {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-#amenities .rental .rentalImg .item{
+#amenities .rental .rentalImg .item {
   align-items: flex-start;
 }
 
-#amenities .rental .rentalImg p{
+#amenities .rental .rentalImg p {
   width: fit-content;
 }
 
@@ -572,7 +584,8 @@ section#amenities .facilities {
 
 #contacto {
   min-height: 100vh;
-  background: linear-gradient(#000000a0 100%, #000000a0 100%), url(../images/water.jpg);;
+  background: linear-gradient(#000000a0 100%, #000000a0 100%),
+    url(../images/water.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -585,20 +598,22 @@ section#amenities .facilities {
   min-height: 100vh;
 }
 
-#contacto p, #contacto a, #contacto h3 {
+#contacto p,
+#contacto a,
+#contacto h3 {
   color: #fff;
 }
 
 #contacto .left form .form-control {
   background-color: #ffffffd6;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
 
 #contacto .left form .form-control:focus {
   background-color: #ffffff;
 }
 
-#contacto .left form button{
+#contacto .left form button {
   width: 40%;
   margin-top: 15px;
 }
@@ -614,22 +629,25 @@ section#amenities .facilities {
   padding-top: 60px;
 }
 
-#contacto .right, #contacto .left {
+#contacto .right,
+#contacto .left {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#contacto .right p, #contacto .right a{
+#contacto .right p,
+#contacto .right a {
   text-align: center;
 }
 
-#contacto .right a:hover{
+#contacto .right a:hover {
   text-decoration: none;
 }
 
 #contacto .right img {
   width: 35px;
+  transform: translateY(-4px);
 }
 
 .footer > div {
@@ -650,53 +668,24 @@ section#amenities .facilities {
 
 /*---------------------Querys--------------------*/
 
-@media screen and (max-width: 980px) {
 
-  /*------navbar-------*/
-
-  header .container {
-    align-items: center;
+@media (max-width: 1199.98px) { 
+  :root{
+    font-size: 14px;
   }
-
- /* .container {
-    width: calc(100% - 50px);
-  }*/
-
-  /*------header-------*/
-
-  #header {
-    background-position: top;
+  #subHeader .col-right img, #subHeader p{
+    margin-bottom: 10px!important;
   }
-
-    header {
-      height: 50px;
-      padding: 10px 0;
-    }
-    header nav {
-      display: none;
-    }
-    header nav.show {
-      display: flex;
-    }
-    header nav {
-      position: absolute;
-      top: 100%;
-      flex-direction: column;
-      background: #ffffffe6;
-      height: auto;
-      width: 100%;
-      left: 0;
-      border-bottom: solid 3px var(--primary);
-      z-index: 1;
-    }
-
-  /*-------Units--------*/
-
-  #units .fancyImgBox {
-    grid-template-columns: 1fr;
+  #project .projectText {
+    padding-left: 0;
+    padding-top: 0;
   }
+}
 
-  
+@media (max-width: 991.98px) {
+  :root {
+    font-size: 12px;
+  }
   header {
     height: 50px;
     padding: 10px 0;
@@ -729,114 +718,182 @@ section#amenities .facilities {
   #burger {
     display: flex;
   }
-  #proyecto {
-    padding: 40px 0px;
+  #header {
+    background-position: top;
   }
-  #proyecto .container {
-    flex-direction: column-reverse;
-    justify-content: center;
+  #header div#whatsappBtn button img {
+      width: 30px;
   }
-  #proyecto .left {
-    margin-top: 30px;
+  #location p.paragraph {
+    font-size: 1.6rem;
   }
-  #proyecto p:nth-child(3) {
-    margin: 30px 0px;
+  #units ul.listFancyBox {
+    font-size: 1rem;
   }
-  /* unidades */
-  #unidades {
-    padding-top: 40px;
+  #amenities .item img {
+    width: 80px;
   }
-  button.glide__arrow.glide__arrow--left,
-  button.glide__arrow.glide__arrow--right {
-    border-width: 15px;
-    margin-top: -15px;
+  #amenities .item p {
+    font-size: 1.2rem;
+    line-height: 20px;
   }
-  /* amenities */
-  #amenities {
-    padding: 40px 0px;
+  #amenities .rental {
+    margin: 100px 0;
   }
-  #amenities .container {
-    align-items: center;
-    flex-direction: column-reverse;
+}
+
+@media (max-width: 767.98px) {
+  #project .projectText {
+    padding-left: 15px;
+    padding-top: 30px;
   }
-  #amenities .left {
-    margin-top: 20px;
+  #location p.paragraph {
+    font-size: 1.2rem;
   }
-  #contacto {
-    padding: 40px 0px;
+  #units .fancyImgBox {
+    grid-template-columns: 1fr;
   }
-  #contacto h3 {
-    margin: 0 auto;
-    margin-bottom: 25px;
-    max-width: 600px;
+  #units .fancyImgBox div.fancyBox:not(:first-child) {
+    padding-top: 50px;
+  }  
+  #contacto .container .row:not(.footer) {
+    padding-top: 0px;
   }
-  #contacto .left,
-  #contacto .right,
-  #amenities .left,
-  #amenities .right,
-  #proyecto .left,
-  #proyecto .right {
-    max-width: 600px;
+  #contacto .right, #contacto .left {
+    padding-top: 50px;
   }
-  #contacto form input.submit {
-    font-size: 18px;
-  }
-  #contacto .right {
+  #contacto .right p, #contacto .right a {
     text-align: left;
-    padding: 35px 0px;
   }
-  #contacto .right p {
-    width: 100%;
-    font-size: 20px;
+  #contacto .right a{
+    margin-bottom: 40px;
   }
-  #contacto .right .wpp {
-    font-size: 25px;
-    width: 100%;
-    justify-content: flex-start;
+  #contacto .right img {
+    width: 25px;
   }
-  #contacto .bottom {
-    margin-top: 10px;
+  .footer img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  h1, p.h1 {
+    font-size: 2rem;
+  }
+  h3, p.h3 {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  .subtitleBorder {
+    width: 20%;
+  }
+  section#header p.h1 {
+    font-size: 2rem;
+    line-height: 20px;
+  }
+  section#header p.h1:last-of-type {
+    line-height: 24px;
+  }
+  #header div#whatsappBtn button {
+    padding: 6px;
+  }
+  #header div#whatsappBtn button img {
+    width: 24px;
+  }
+  #header div#whatsappBtn a span {
+    padding: 3px 7px;
+    font-size: 1rem;
+  }
+  #project .projectText p.paragraph {
+    line-height: 20px;
+  }
+  #location p.paragraph {
+    font-size: 1.1rem;
+    line-height: 18px;
+  }
+  #units {
+    padding: 30px 0;
+  }
+  #units .fancyImgBox {
+    margin-bottom: 30px;
+  }
+  #unitsCarousel .owl-dots {
+    bottom: 5px;
+  }
+  #unitsCarousel .owl-nav span {
+    font-size: 3rem;
+  }
+  section#unitsCarousel .owl-dots button {
+    width: 7px;
+    height: 7px;
+  }
+  #unitsCarousel .owl-nav button.owl-prev {
+    left: 2px;
+  }
+  #unitsCarousel .owl-nav button.owl-next {
+    right: 2px;
+  }
+  #amenities .item img {
+    width: 60px;
+  }
+  #amenities .rental {
+    margin: 50px 0;
+  }
+  #amenities .rental .paragraph p:last-child {
+    font-size: 1.3rem;
+    line-height: 20px;
+  }
+  #amenities .rental .rentalImg .item:first-child img {
+    margin-left: 4px;
+  }
+  #amenities .rental .rentalImg .item:nth-child(2) img {
+    margin-left: 2px;
+  }
+  #amenities .rental .rentalImg .item:last-child img {
+    margin-left: 10px;
+  }
+  #contacto .left p {
+    font-size: 2.3rem;
+  }
+  .footer img {
+    height: 20px;
   }
 }
 
 /*----------------------animations----------------------*/
 
 @-webkit-keyframes bannerText {
- 
-from {
+  from {
     left: -200px;
     opacity: 0;
-      }
-to {
-      left: 0;
-      opacity: 1;
-    }
- }
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
 
 #bannerText {
   position: relative;
   -webkit-animation-name: bannerText;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 1.5s;
   -webkit-animation-iteration-count: 1;
-  -webkit-animation-direction: right;
   -webkit-animation-timing-function: ease-in;
 }
 
-@-webkit-keyframes bannerBtn{
- 
-from {
+@-webkit-keyframes bannerBtn {
+  from {
     opacity: 0;
-      }
-to {
+  }
+  to {
     opacity: 1;
-    }
- }
+  }
+}
 
 #bannerBtn {
   position: relative;
   -webkit-animation-name: bannerBtn;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 1.5s;
   -webkit-animation-iteration-count: 1;
-  -webkit-animation-direction: right;
   -webkit-animation-timing-function: ease-in;
 }
