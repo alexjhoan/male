@@ -299,9 +299,7 @@ section#header p.h1:last-of-type {
 
 #subHeader .col-left img {
   height: auto;
-  width: auto;
-  max-height: 82vh;
-  max-width: 100%;
+  width: 100%;
 }
 
 #subHeader .col-right {
