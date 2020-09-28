@@ -101,7 +101,7 @@ img {
   padding: 13px 24px;
   font-size: 1.3rem;
   border-radius: 30px;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 1;
   transition: ease-in-out 0.2s;
 }
@@ -113,8 +113,7 @@ img {
   color: #fff !important;
   border-color: #fff !important;
   background-color: var(--btn-hover) !important;
-  font-size: 1.28rem;
-  /*padding: 13px 29px;*/
+  font-weight: 100;
   transition: ease-in-out 0.3s;
 }
 
@@ -229,7 +228,7 @@ section#header p.h1:last-of-type {
 
 #header div#whatsappBtn {
   position: fixed;
-  bottom: 15px;
+  bottom: 0;
   right: 15px;
   width: auto;
   padding: 0;
@@ -252,7 +251,9 @@ section#header p.h1:last-of-type {
   border-radius: 100%;
   padding: 10px;
   border: none;
-  transform: translateY(6px);
+  position: relative;
+  z-index: 1;
+  animation: brickBtn 6s infinite;
 }
 
 #header div#whatsappBtn button:focus {
@@ -267,6 +268,7 @@ section#header p.h1:last-of-type {
   background: var(--primary);
   padding: 6px 10px;
   font-size: 14px;
+  margin-top: -6px;
 }
 
 #subHeader {
@@ -449,6 +451,27 @@ section#project {
   padding-right: 0;
 }
 
+.fancybox-button, .fancybox-button:link, .fancybox-button:visited{
+  color: #fff;
+  width: 55px;
+  height: 55px;
+}
+.fancybox-button:hover{
+  color: #ccc;
+}
+
+.fancybox-button.fancybox-button--arrow_right, .fancybox-button.fancybox-button--arrow_left{
+  width: 80px;
+  height: 110px;
+}
+
+.fancybox-button>div {
+  color: #fff;
+}
+.fancybox-button:hover>div {
+  color: #ccc;
+}
+
 #units .information {
   padding-left: 10px;
 }
@@ -528,36 +551,39 @@ section#amenities .facilities {
   grid-template-columns: 1fr 1fr;
 }
 
-#amenities .item {
+#amenities .item, #rental .rental .item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#amenities .item img {
+#amenities .item img, #rental .rental .item img {
   width: 100px;
 }
 
-#amenities .item p {
+#amenities .item p, #rental .rental .item p {
   text-align: center;
-  font-size: 1.3rem;
-  line-height: 25px;
+  font-size: 1rem;
+  line-height: 18px;
+  margin-top: 8px;
 }
 
-#amenities .rental {
-  margin: 250px 0 100px;
+#rental {
+  background: #f2f2f2;
+  padding: 150px 0 100px;
+  margin-top: 100px;
 }
 
-#amenities .rental .paragraph p {
+#rental .rental .paragraph p {
   color: var(--text);
 }
 
-#amenities .rental .paragraph p:nth-child(2) {
+#rental .rental .paragraph p:nth-child(2) {
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
 
-#amenities .rental .paragraph p:last-child {
+#rental .rental .paragraph p:last-child {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 26px;
@@ -565,17 +591,27 @@ section#amenities .facilities {
   margin-bottom: 40px;
 }
 
-#amenities .rental .rentalImg {
+#rental .rental .rentalImg {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-#amenities .rental .rentalImg .item {
+#rental .rental .rentalImg .item {
   align-items: flex-start;
 }
 
-#amenities .rental .rentalImg p {
+#rental .rental .rentalImg p {
   width: fit-content;
+}
+
+#rental .rental .rentalImg .item:first-child p {
+  margin-left: 15px;
+}
+#rental .rental .rentalImg .item:nth-child(2) p {
+  margin-left: 22px;
+}
+#rental .rental .rentalImg .item:last-child p {
+  margin-left: 10px;
 }
 
 /*--------------------------Contact-----------------------------*/
@@ -622,9 +658,10 @@ section#amenities .facilities {
 }
 
 #contacto .left h3 {
-  text-align: center;
+  text-align: left;
   min-height: 368px;
-  padding-top: 60px;
+  padding-top: 70px;
+  font-size: 1.5rem;
 }
 
 #contacto .right,
@@ -656,7 +693,7 @@ section#amenities .facilities {
 }
 
 .footer img {
-  height: 40px;
+  height: 30px;
   padding: 0 20px;
 }
 
@@ -712,6 +749,7 @@ section#amenities .facilities {
     border-radius: 0px;
     text-align: center;
     font-size: 1.2rem;
+    padding: 8px 15px;
   }
   #burger {
     display: flex;
@@ -731,23 +769,23 @@ section#amenities .facilities {
   #units ul.listFancyBox {
     font-size: 1rem;
   }
-  #amenities .item img {
+  #amenities .item img, #rental .rental .item img {
     width: 80px;
   }
-  #amenities .item p {
+  #amenities .item p, #rental .rental .item p {
     font-size: 1.2rem;
     line-height: 20px;
   }
-  #amenities .rental {
+  #rental .rental {
     margin: 100px 0;
   }
-  #amenities .rental .rentalImg .item:first-child p {
+  #rental .rental .rentalImg .item:first-child p {
     margin-left: 6px;
   }
-  #amenities .rental .rentalImg .item:nth-child(2) p {
-    margin-left: 10px;
+  #rental .rental .rentalImg .item:nth-child(2) p {
+    margin-left: 12px;
   }
-  #amenities .rental .rentalImg .item:last-child p {
+  #rental .rental .rentalImg .item:last-child p {
     margin-left: 0px;
   }
 }
@@ -765,6 +803,14 @@ section#amenities .facilities {
   }
   #units .fancyImgBox div.fancyBox:not(:first-child) {
     padding-top: 50px;
+  }
+  .fancybox-button, .fancybox-button:link, .fancybox-button:visited{
+    width: 45px;
+    height: 45px;
+  }
+  .fancybox-button.fancybox-button--arrow_right, .fancybox-button.fancybox-button--arrow_left{
+    width: 70px;
+    height: 100px;
   }
   #contacto .container .row:not(.footer) {
     padding-top: 0px;
@@ -846,24 +892,15 @@ section#amenities .facilities {
   #amenities .item img {
     width: 60px;
   }
-  #amenities .rental {
+  #rental .rental {
     margin: 50px 0;
   }
-  #amenities .rental .paragraph p:last-child {
+  #rental .rental .paragraph p:last-child {
     font-size: 1.3rem;
     line-height: 20px;
   }
-  #amenities .rental .rentalImg .item p {
-    margin-left: 0!important;
-  }
-  #amenities .rental .rentalImg .item:first-child img {
-    margin-left: 4px;
-  }
-  #amenities .rental .rentalImg .item:nth-child(2) img {
+  #rental .rental .rentalImg .item:last-child img {
     margin-left: 2px;
-  }
-  #amenities .rental .rentalImg .item:last-child img {
-    margin-left: 10px;
   }
   #contacto .left p {
     font-size: 2.3rem;
@@ -892,7 +929,7 @@ section#amenities .facilities {
 #bannerText {
   position: relative;
   -webkit-animation-name: bannerText;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in;
 }
@@ -909,7 +946,46 @@ section#amenities .facilities {
 #bannerBtn {
   position: relative;
   -webkit-animation-name: bannerBtn;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in;
+}
+
+@keyframes brickBtn {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  90% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  91% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  92% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  93% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  94% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  95% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  96% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  97% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  98% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  99% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
