@@ -1,47 +1,5 @@
 @import "fonts.css";
 
-/*
-
-si la altura del contenedor es mayor a escrol no funciona
-
-si la altura es mayor que la altura de los componentes anteriores funciona
-
-DONE: banner: totalmente blanco e igual fixed
-
-DONE: banner P: letra en 2.8rem
-
-DONE: banner P: las letras que entre con fade y con slide izquierdca y el boton solo son fade-in
-
-DONE: menu movil: menu de movil centrado, una opacidad mas padding de separacion, borde inferior #fff 
- 
-DONE: botones: tamaño de letra de los botones mas pequeños en hover
-
-DONE: fancy box: el hover del boton acomodar y escalar la imegen 
-
-DONE: Carousel: alto auto y ancho 100% 
-
-DONE: agregar el google analytics 
-
-DONE: VERIFICAR: contacto: mensaje enviado: Poner más chiquito ese texto, del tamaño que está "oficinas para trato....". Cambiarlo por : ¡Consulta enviada con éxito! En breve un asesor se comunicará contigo.
-
-DONE: Animación del principio: está muy muy lenta
-
-DONE: Amenities: quitarle un poquito de interlineado a la frase de Diseñamos exclusivos servicios
-
-DONE: Amenities: quitarle un poquito de interlineado a los textos de los iconos
-
-DONE: Amenities2: alinear los iconos a la izquierda donde empiezan las frases.
-
-DONE: Units: el botón centrado.
-
-TODO: subheader: el botón dentro de lo azul.
-
-DONE: text menu: y le sacaría el subrayado y el azul, solo cambiar a bold cuando está en hover pero que conserve el color
-
-DONE: banner: dar más interlineado al 2do texto
-
-*/
-
 :root {
   --primary: #47b4a9;
   --secondary: #033545;
@@ -839,6 +797,15 @@ section#amenities .facilities {
   #contacto .right img {
     width: 25px;
   }
+  #units {
+    padding: 70px 0 0;
+  }
+  #location {
+    padding: 43px 0 0;
+  }
+  #contacto {
+    padding: 10px 0 0;
+  }
   .footer img {
     height: 30px;
   }
@@ -878,9 +845,6 @@ section#amenities .facilities {
   #location p.paragraph {
     font-size: 1.1rem;
     line-height: 18px;
-  }
-  #units {
-    padding: 30px 0;
   }
   #units .fancyImgBox {
     margin-bottom: 30px;

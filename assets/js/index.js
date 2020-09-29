@@ -110,19 +110,14 @@ jQuery(window).resize(imgParallax);
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
-          console.log("no envio")
         } else {
-          console.log("prueba de envio")
-           submited()
-
+          submited()
         }
         form.classList.add('was-validated');
       }, false);
@@ -131,22 +126,20 @@ jQuery(window).resize(imgParallax);
 })();
 
 function submited() {
-  console.log("es submited")
- var form = document.querySelector("#contacto form");
-          var data = serialize(form)
-
-          postAjax(
-            "https://www.infocasas.com.uy/?mid=formulario&func=ajax_save",
-            data,
-            function () {
-              var anchor = document.querySelector("#contacto .left");
-              var myText = document.createElement("h3");
-              form.style = "display:none";
-              myText.innerHTML = "¡Consulta enviada con éxito!<br />En breve un asesor se comunicará contigo.";
-              anchor.appendChild(myText);
-             
-            }
-          ) 
+  var form = document.querySelector("#contacto form");
+  var data = serialize(form)
+  postAjax(
+    "https://www.infocasas.com.uy/?mid=formulario&func=ajax_save",
+    data,
+    function () {
+      var anchor = document.querySelector("#contacto .left");
+      var myText = document.createElement("h3");
+      form.style = "display:none";
+      myText.innerHTML = "¡Consulta enviada con éxito!<br />En breve un asesor se comunicará contigo.";
+      anchor.appendChild(myText);
+     
+    }
+  ) 
 }
 
 function serialize(form) {
