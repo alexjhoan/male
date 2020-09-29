@@ -118,6 +118,11 @@ jQuery(window).resize(imgParallax);
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
+          console.log("no envio")
+        } else {
+          console.log("prueba de envio")
+           submited()
+
         }
         form.classList.add('was-validated');
       }, false);
@@ -125,41 +130,23 @@ jQuery(window).resize(imgParallax);
   }, false);
 })();
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("burger").addEventListener("click", toggleMenu);
-  document.getElementById("inputFecha").value = new Date().toLocaleDateString();
-
-  var menuItems = document.getElementsByClassName("menu-item");
-  for (var i = 0; i < menuItems.length; i++) {
-    menuItems[i].addEventListener("click", toggleMenu);
-  }
-});
-
-function toggleMenu() {
-  const element = document.getElementById("menu");
-  element.classList.toggle("show");
-}
-
 function submited() {
-  var form = document.querySelector("#contacto form");
-  var data = serialize(form);
+  console.log("es submited")
+ var form = document.querySelector("#contacto form");
+          var data = serialize(form)
 
-  postAjax(
-    "https://www.infocasas.com.uy/?mid=formulario&func=ajax_save",
-    data,
-    function () {
-      var anchor = document.querySelector("#contacto .left");
-      var myText = document.createElement("h3");
-      form.style = "display:none";
-      myText.innerHTML = "¡Consulta enviada con éxito!<br />En breve un asesor se comunicará contigo.";
-      anchor.appendChild(myText);
-      gtag("event", "form_submit_complete", {
-        event_label: "consulta",
-        event_category: "form_submit",
-        value: 1,
-      });
-    }
-  );
+          postAjax(
+            "https://www.infocasas.com.uy/?mid=formulario&func=ajax_save",
+            data,
+            function () {
+              var anchor = document.querySelector("#contacto .left");
+              var myText = document.createElement("h3");
+              form.style = "display:none";
+              myText.innerHTML = "¡Consulta enviada con éxito!<br />En breve un asesor se comunicará contigo.";
+              anchor.appendChild(myText);
+             
+            }
+          ) 
 }
 
 function serialize(form) {
@@ -229,4 +216,19 @@ function postAjax(url, data, success) {
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhr.send(params);
   return xhr;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("burger").addEventListener("click", toggleMenu);
+  document.getElementById("inputFecha").value = new Date().toLocaleDateString();
+
+  var menuItems = document.getElementsByClassName("menu-item");
+  for (var i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener("click", toggleMenu);
+  }
+});
+
+function toggleMenu() {
+  const element = document.getElementById("menu");
+  element.classList.toggle("show");
 }
