@@ -237,6 +237,7 @@ section#header p.h1:last-of-type {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-top: 45px;
 }
 
 #subHeader .container {
