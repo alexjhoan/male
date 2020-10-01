@@ -225,3 +225,38 @@ function toggleMenu() {
   const element = document.getElementById("menu");
   element.classList.toggle("show");
 }
+
+// determina si un elemento comienza a ser visible
+function isElementVisible(container){
+  let viewScrollTop = $(window).scrollTop(); // distancia de scroll superior
+  let viewBottom = viewScrollTop + $(window).height(); // distancia de scroll + el alto actual de window (lo no visible por scroll + lo visible)
+  let topElemD = $(container).offset().top; // distancia desde el elemento hasta el tope superior del viewport
+  return (topElemD < viewBottom);
+}
+
+
+$(window).on("scroll" ,function() {
+  let container = $('#project');
+  let elem = $("#project .titleHidden")
+  isElementVisible(container) ? elem.addClass('titleShow') : null; 
+
+  let container1 = $('#location');
+  let elem1 = $("#location .titleHidden")
+  isElementVisible(container1) ? elem1.addClass('titleShow') : null; 
+
+  let container2 = $('#units');
+  let elem2 = $("#units .titleHidden")
+  isElementVisible(container2) ? elem2.addClass('titleShow') : null; 
+
+  let container3 = $('#amenities');
+  let elem3 = $("#amenities .titleHidden")
+  isElementVisible(container3) ? elem3.addClass('titleShow') : null;
+
+  let container4 = $('#rental');
+  let elem4 = $("#rental .titleHidden")
+  isElementVisible(container4) ? elem4.addClass('titleShow') : null; 
+
+  let container5 = $('#contacto');
+  let elem5 = $("#contacto .titleHidden")
+  isElementVisible(container5) ? elem5.addClass('titleShow') : null; 
+});

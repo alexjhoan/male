@@ -27,7 +27,7 @@ function init(){
 
 	// Init some utils
 	var rainMaker = new RainMaker(width, height, waterModel, raindrop);
-	rainMaker.setRaindropsPerSecond(2);
+	rainMaker.setRaindropsPerSecond(1);
 	enableMouseInteraction(waterModel, "waterHolder");
 
 
@@ -131,7 +131,7 @@ function init1(){
 
 	// Init some utils
 	var rainMaker = new RainMaker(width, height, waterModel, raindrop);
-	rainMaker.setRaindropsPerSecond(2);
+	rainMaker.setRaindropsPerSecond(1);
 	enableMouseInteraction(waterModel, "waterHolder1");
 
 

@@ -42,8 +42,11 @@
       href="assets/js/owl-carousel/owl.theme.default.min.css"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
   </head>
   <body onload="init(), init1()">
+  <!-- <body> -->
+
     <!-- Google Tag Manager (noscript) -->
       <noscript>
         <iframe
@@ -56,11 +59,11 @@
       </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header>
-      <div class="container">
+      <div class="containerHeader">
         <a href="/" class="logo">
           <img src="assets/images/logo.png" alt="Male" />
         </a>
-        <nav id="menu">
+        <nav id="desktopMenu">
           <a href="#subHeader" class="menu-item">Proyecto</a>
           <a href="#project" class="menu-item">Ubicación</a>
           <a href="#units" class="menu-item">Unidades</a>
@@ -72,6 +75,12 @@
           <div></div>
         </div>
       </div>
+      <nav id="menu">
+          <a href="#subHeader" class="menu-item">Proyecto</a>
+          <a href="#project" class="menu-item">Ubicación</a>
+          <a href="#units" class="menu-item">Unidades</a>
+          <a href="#contacto" class="menu-item">Contacto</a>
+        </nav>
     </header>
     <section id="header">
       <div class="container">
@@ -147,7 +156,7 @@
             <img src="assets/images/ubication.jpg" />
           </div>
           <div class="col-12 col-md-7 projectText">
-            <p class="h1 mb-3">
+            <p class="h1 mb-3 titleHidden">
               En pleno centro de negocios<br class="d-none d-md-block" /> y comercial de Asunción
             </p>
             <p class="mb-sm-5">
@@ -171,7 +180,7 @@
         <div class="row">
           <div class="col-12 p-0">
             <p class="views">Vista desde la terraza</p>
-            <p class="paragraph">
+            <p class="paragraph titleHidden">
               A pasos de la Av. Santa<br />Teresa, World Trade Center,<br />importantes
               shoppings,<br />universidades y colegios.
             </p>
@@ -188,13 +197,13 @@
     <section id="units">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <p class="h1">Unidades</p>
-            <p class="h3 mb-4">
+          <div class="col-12 ">
+            <p class="h1 titleHidden">Unidades</p>
+            <p class="h3 mb-4 titleHidden">
               15 amplios y modernos departamentos de 1 y 2 dormitorios con
               balcón
             </p>
-            <div class="subtitleBorder"></div>
+            <div class="subtitleBorder titleHidden"></div>
             <div class="fancyImgBox">
               <div class="fancyBox">
                 <a href="assets/images/deptoa.jpg" data-fancybox="gallery">
@@ -300,11 +309,11 @@
       <div class="container">
         <div class="row my-5">
           <div class="col-12">
-            <p class="h1">Amenities</p>
-            <p class="h3 mb-3">
+            <p class="h1 titleHidden">Amenities</p>
+            <p class="h3 mb-3 titleHidden">
               Espacios diseñados para transportarte a la magia de las Maldivas
             </p>
-            <div class="subtitleBorder"></div>
+            <div class="subtitleBorder titleHidden"></div>
           </div>
         </div>
         <div class="row my-5 pt-md-5">
@@ -349,7 +358,7 @@
             <img src="assets/images/alqtemporal.png" alt="" />
           </div>
           <div class="col-12 col-md-7 col-right">
-            <div class="paragraph">
+            <div class="paragraph titleHidden">
               <p class="h1 mb-4">Alquiler anual y temporal</p>
               <p>
                 Debido a su ubicación estratégica en el centro financiero <br class="d-none d-md-block" />de
@@ -360,7 +369,7 @@
                 de los huéspedes.
               </p>
             </div>
-            <div class="rentalImg">
+            <div class="rentalImg titleHidden">
               <div class="item">
                 <img src="assets/images/icons/reception.png" alt="" />
                 <p>Recepción<br />24hs.</p>
@@ -382,7 +391,7 @@
       <div id="waterHolder1"></div>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 left">
+          <div class="col-12 col-md-6 left titleHidden">
             <p class="h1">Dejanos tu consulta</p>
             <form novalidate class="needs-validation" action="javascript:void(0);">
               <div class="form-group">
@@ -473,6 +482,7 @@
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <script src="assets/js/fancy-box/jquery.fancybox.min.js"></script>
     <script src="assets/js/waterAnimation.js"></script>
+    <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
     <script src="assets/js/index.js"></script>
   </body>
 </html>
