@@ -36,13 +36,14 @@
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/js/fancy-box/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="assets/js/owl-carousel/owl.carousel.min.css" />
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/ui-darkness/jquery-ui.css" rel="stylesheet" type="text/css">
     <link
       rel="stylesheet"
       href="assets/js/owl-carousel/owl.theme.default.min.css"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-  <body>
+  <body onload="init(), init1()">
     <!-- Google Tag Manager (noscript) -->
       <noscript>
         <iframe
@@ -104,6 +105,7 @@
       </div>
     </section>
     <section id="subHeader">
+      <div id="waterHolder"></div>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-xl-5 d-none d-md-flex col-left">
@@ -377,6 +379,7 @@
       </div>
     </section>
     <section id="contacto">
+      <div id="waterHolder1"></div>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 left">
@@ -440,7 +443,6 @@
                 Enviar
               </button>
             </form>
-
           </div>
           <div class="col-12 col-md-6 right">
             <p class="h3 mb-5">
@@ -465,9 +467,12 @@
       </div>
     </section>
     <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+    <script src="assets/js/watercanvas.js"></script>
     <script src="assets/js/owl-carousel/owl.carousel.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <script src="assets/js/fancy-box/jquery.fancybox.min.js"></script>
+    <script src="assets/js/waterAnimation.js"></script>
     <script src="assets/js/index.js"></script>
   </body>
 </html>
