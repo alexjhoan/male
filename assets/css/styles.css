@@ -239,6 +239,8 @@ section#header p.h1:last-of-type {
   margin-top: -6px;
 }
 
+/*------------------------------Sub-Header-------------------------------*/
+
 #subHeader {
   box-sizing: border-box;
   width: 100%;
@@ -250,21 +252,16 @@ section#header p.h1:last-of-type {
   z-index: 1;
 }
 
-#subHeader #waterHolder {
+#subHeader #waves{
   position: absolute;
-  min-height: 850px;
-  width: 100%;
-  z-index: 0;
-}
-
-#subHeader #waterHolder canvas {
-  min-height: 850px;
-  width: 100%;
+  width: 130%;
+  height: auto;
+  top: 0;
 }
 
 #subHeader .container {
   width: 90%;
-  background: #00000060;
+  background: #000000a0;
   margin: 50px auto;
   max-width: 1200px;
   position: relative;
@@ -602,24 +599,21 @@ section#amenities .facilities {
 }
 
 section#contacto:before {
-    content: "";
-    min-height: 100vh;
-    width: 100%;
-    background: #00000060;
-    position: absolute;
-    z-index: 1;
-}
-
-#contacto #waterHolder1 {
+  content: "";
+  height: 200vh;
+  width: 100%;
+  background: #000000a0;
   position: absolute;
-  width: 100%;
-  min-height: 100vh;
-  z-index: 0;
+  z-index: 1;
+  top: 0;
 }
 
-#contacto #waterHolder1 canvas {
-  width: 100%;
-  min-height: 100vh;
+#contacto #waves {
+  position: absolute;
+  width: 110%;
+  height: auto;
+  z-index: 0;
+  top: 0;
 }
 
 #contacto .container {
@@ -735,7 +729,7 @@ section#contacto:before {
   }
   header nav#menu {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 47px;
     flex-direction: column;
     background: #ffffffe6;
@@ -743,7 +737,7 @@ section#contacto:before {
     width: 100%;
     left: 0;
     border-bottom: solid 3px var(--primary);
-    z-index: 1;
+    z-index: 9;
     opacity: 0;
     transform: translateY(-200px);
     transition: cubic-bezier(1, 0, 1, 1) .8s
@@ -751,7 +745,7 @@ section#contacto:before {
   header nav#menu.show {
     opacity: 1;
     transform: translateY(0);
-    transition: cubic-bezier(0, -0.01, 0.17, 1) 1s
+    transition: cubic-bezier(0, 0, 0.2, 1) 1s
   }
   header nav a {
     border-top: solid 3px var(--primary);
@@ -774,10 +768,7 @@ section#contacto:before {
   #subHeader, #subHeader .container, #subHeader .col-left, #subHeader .col-right {
     min-height: auto;
   }
-  #subHeader #waterHolder {
-    width: auto;
-  }
-  #subHeader #waterHolder canvas {
+  #subHeader #waves {
     width: auto;
   }
   #location p.paragraph {
@@ -810,7 +801,9 @@ section#contacto:before {
   #rental .rental .rentalImg .item:last-child p {
     margin-left: 0px;
   }
-
+  #contacto #waves {
+    width: auto;
+  }
 }
 
 @media (max-width: 767.98px) {

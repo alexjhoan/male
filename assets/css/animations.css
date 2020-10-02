@@ -20,7 +20,7 @@
 
 #header {
   -webkit-animation-name: imgBanner;
-  -webkit-animation-duration: 12s;
+  -webkit-animation-duration: 17s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in;
 }
@@ -29,11 +29,11 @@
 
 @-webkit-keyframes bannerText {
   from {
-    left: -200px;
+    transform: translateY(-30px);
     opacity: 0;
   }
   to {
-    left: 0;
+    transform: translateY(0px);
     opacity: 1;
   }
 }

@@ -230,7 +230,7 @@ function toggleMenu() {
 function isElementVisible(container){
   let viewScrollTop = $(window).scrollTop(); // distancia de scroll superior
   let viewBottom = viewScrollTop + $(window).height(); // distancia de scroll + el alto actual de window (lo no visible por scroll + lo visible)
-  let topElemD = $(container).offset().top; // distancia desde el elemento hasta el tope superior del viewport
+  let topElemD = $(container).offset().top + 250; // distancia desde el elemento hasta el tope superior del viewport
   return (topElemD < viewBottom);
 }
 
