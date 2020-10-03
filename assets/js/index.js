@@ -30,8 +30,7 @@ $(function() {
     let myscroll = $(window).scrollTop()
     if (myscroll < alturaHeader ){
       let el = $('#header');
-      var scroll = $(document).scrollTop();
-      el.css({'background-position':'50% calc(30% + '+(.4*scroll)+'px)'});
+      el.css({'background-position':'50% calc(30% + '+(.4*myscroll)+'px)'});
     }
   });
 });
@@ -73,7 +72,7 @@ function imgParallax() {
           var scroll = $(document).scrollTop() - alturaTotal
           let scroll2 = scroll - altura3
           el.css({
-            'transform':'translate(15%, '+(.4*scroll2)+'px) scale(1.5)'
+            'transform':'translateY('+(.4*scroll2)+'px)'
           });
         }
       });
@@ -103,6 +102,32 @@ function imgParallax() {
 
 imgParallax()
 jQuery(window).resize(imgParallax);
+
+// ------------------------------Amenities-Parallax-----------------------------
+
+$(function() {
+  $(window).scroll(function() {
+    let container = $("#amenities")
+    let heightTop = container.position().top;
+    let scroll = $(window).scrollTop()
+    let heightElem = container.height()
+
+    let suma = scroll - heightTop
+
+    if (scroll > (heightTop - heightElem)){
+      let el = $('#edfAmenities')
+      el.css({
+        'transform':'translateY(calc(-30px + '+ (.15*suma) +'px))'
+      })
+    }
+    if (scroll > (heightTop - heightElem)){
+      let el = $('#linea-turquesa')
+      el.css({
+        'transform':'translateY(calc(-30px + '+ (.08*suma) +'px))'
+      })
+    }
+  })
+});
 
 
 // validacion de el formulario

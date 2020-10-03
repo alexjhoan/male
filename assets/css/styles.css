@@ -526,14 +526,35 @@ section#amenities .facilities {
   grid-template-columns: 1fr 1fr;
 }
 
+#amenities .title{
+  z-index: 1;
+  background: #fff;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#amenities img#linea-turquesa {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin-left: -15px;
+}
+
+#amenities img#edfAmenities {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 92%;
+}
+
 #amenities .item, #rental .rental .item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
-#amenities .item img, #rental .rental .item img {
-  width: 100px;
+#amenities .item svg, #rental .rental .item svg {
+  width: 100px!important;
 }
 
 #amenities .item p, #rental .rental .item p {
@@ -547,6 +568,8 @@ section#amenities .facilities {
   background: #f2f2f2;
   padding: 150px 0 100px;
   margin-top: 100px;
+  position: relative;
+  z-index: 2;
 }
 
 #rental .rental .paragraph p {
@@ -777,8 +800,8 @@ section#contacto:before {
   #units ul.listFancyBox {
     font-size: 1rem;
   }
-  #amenities .item img, #rental .rental .item img {
-    width: 80px;
+  #amenities .item svg, #rental .rental .item svg {
+    width: 80px!important;
   }
   #amenities .item p, #rental .rental .item p {
     font-size: 1.2rem;
@@ -918,8 +941,8 @@ section#contacto:before {
   #unitsCarousel .owl-nav button.owl-next {
     right: 2px;
   }
-  #amenities .item img {
-    width: 60px;
+  #amenities .item svg {
+    width: 60px!important;
   }
   #rental .rental {
     margin: 50px 0;
