@@ -13,7 +13,7 @@ particlesJS("waves", {
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 2,
+        "width": 0,
         "color": "#ffffff"
       },
       "polygon": {
@@ -124,7 +124,7 @@ particlesJS("waves2", {
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 2,
+        "width": 0,
         "color": "#ffffff"
       },
       "polygon": {
