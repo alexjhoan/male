@@ -1,7 +1,7 @@
 particlesJS("waves", {
   "particles": {
     "number": {
-      "value": 355,
+      "value": 955,
       "density": {
         "enable": true,
         "value_area": 789.1476416322727
@@ -13,16 +13,16 @@ particlesJS("waves", {
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 0,
-        "color": "#000000"
+        "width": 2,
+        "color": "#ffffff"
       },
       "polygon": {
         "nb_sides": 5
       },
       "image": {
         "src": "img/github.svg",
-        "width": 100,
-        "height": 100
+        "width": 800,
+        "height": 800
       }
     },
     "opacity": {
@@ -30,7 +30,7 @@ particlesJS("waves", {
       "random": false,
       "anim": {
         "enable": true,
-        "speed": 0.2,
+        "speed": 1.7,
         "opacity_min": 0,
         "sync": false
       }
@@ -40,7 +40,7 @@ particlesJS("waves", {
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 2,
+        "speed": 4,
         "size_min": 0,
         "sync": false
       }
@@ -112,7 +112,7 @@ particlesJS("waves", {
 particlesJS("waves2", {
   "particles": {
     "number": {
-      "value": 355,
+      "value": 955,
       "density": {
         "enable": true,
         "value_area": 789.1476416322727
@@ -124,16 +124,16 @@ particlesJS("waves2", {
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 0,
-        "color": "#000000"
+        "width": 2,
+        "color": "#ffffff"
       },
       "polygon": {
         "nb_sides": 5
       },
       "image": {
         "src": "img/github.svg",
-        "width": 100,
-        "height": 100
+        "width": 800,
+        "height": 800
       }
     },
     "opacity": {
@@ -141,7 +141,7 @@ particlesJS("waves2", {
       "random": false,
       "anim": {
         "enable": true,
-        "speed": 0.2,
+        "speed": 1.7,
         "opacity_min": 0,
         "sync": false
       }
@@ -151,7 +151,7 @@ particlesJS("waves2", {
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 2,
+        "speed": 4,
         "size_min": 0,
         "sync": false
       }
