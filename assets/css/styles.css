@@ -253,6 +253,7 @@ section#header p.h1:last-of-type {
 }
 
 #subHeader #waves{
+  background-image: url("../images/water.jpg");
   position: absolute;
   width: 130%;
   height: auto;
@@ -261,7 +262,7 @@ section#header p.h1:last-of-type {
 
 #subHeader .container {
   width: 90%;
-  background: #000000a0;
+  background: #00000060;
   margin: 50px auto;
   max-width: 1200px;
   position: relative;
@@ -619,23 +620,24 @@ section#amenities .facilities {
   position: relative;
   z-index: 0;
   overflow: hidden;
+  background-image: url("../images/water.jpg");
 }
 
 section#contacto:before {
   content: "";
   height: 200vh;
   width: 100%;
-  background: #000000a0;
+  background: #00000060;
   position: absolute;
   z-index: 1;
   top: 0;
 }
 
-#contacto #waves {
+#contacto #waves2 {
   position: absolute;
-  width: 110%;
+  width: 100%;
   height: auto;
-  z-index: 0;
+  z-index: 1;
   top: 0;
 }
 
@@ -824,7 +826,7 @@ section#contacto:before {
   #rental .rental .rentalImg .item:last-child p {
     margin-left: 0px;
   }
-  #contacto #waves {
+  #contacto #waves2 {
     width: auto;
   }
 }
