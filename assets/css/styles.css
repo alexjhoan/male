@@ -97,15 +97,17 @@ html {
 }
 
 header{
-  position: relative;
+  top: 0;
+  width: 100%;
+  height: 70px;
 }
 
 header > .containerHeader {
+  position: fixed;
   height: 70px;
   padding: 16px 7%;
   box-sizing: border-box;
   background-color: #ffffff;
-  position: fixed;
   width: 100%;
   z-index: 10;
   border-bottom: solid 3px var(--primary);
@@ -157,7 +159,12 @@ header nav a:hover {
 
 /*---------------------------Header--------------------------*/
 
-#header {
+#BannerContainer {
+  position: relative;
+}
+
+#BannerContainer #header {
+  position: fixed;
   padding: 70px 0px 0px;
   box-sizing: border-box;
   height: 100vh;
@@ -168,26 +175,40 @@ header nav a:hover {
   background-position: 0 30%;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 1;
 }
 
-section#header p,
-section#header span {
+#BannerContainer #header2 {
+  position: absolute;
+  opacity: 0;
+  top:0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/headerdia.jpg");
+  background-position: 0 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#header p,
+#header span {
   color: #fff;
 }
 
-section#header p.h1 {
+#header p.h1 {
   font-size: 2.8rem;
   margin-bottom: 5vh;
   color: #fff;
   line-height: 27px;
 }
 
-section#header p.h1:first-of-type span {
+#header p.h1:first-of-type span {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-section#header p.h1:last-of-type {
+#header p.h1:last-of-type {
   margin-bottom: 4vh;
   line-height: 45px;
   font-style: italic;
@@ -250,14 +271,16 @@ section#header p.h1:last-of-type {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  margin-top: 200vh;
+  background-image: url("../images/water.jpg");
+  background-repeat: no-repeat;
 }
 
 #subHeader #waves{
-  background-image: url("../images/water.jpg");
   position: absolute;
-  width: 130%;
   height: auto;
   top: 0;
+  width: 100%;
 }
 
 #subHeader .container {
@@ -621,6 +644,7 @@ section#amenities .facilities {
   z-index: 0;
   overflow: hidden;
   background-image: url("../images/water.jpg");
+  background-repeat: no-repeat;
 }
 
 section#contacto:before {

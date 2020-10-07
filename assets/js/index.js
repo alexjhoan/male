@@ -28,9 +28,31 @@ $(function() {
   $(window).scroll(function() {
     let alturaHeader = $('#header').height()
     let myscroll = $(window).scrollTop()
-    if (myscroll < alturaHeader ){
-      let el = $('#header');
-      el.css({'background-position':'50% calc(30% + '+(.4*myscroll)+'px)'});
+    let el = $('#header');
+    let el2 = $('#header2');
+    let header = $('header')
+    if (myscroll < (alturaHeader + 72) ){
+      el.css({
+        'position': 'fixed',
+        // 'background-position':'50% calc(20% - '+(.6*myscroll)+'px)'
+      });
+      el2.css({
+        'opacity': myscroll/(alturaHeader),
+        // 'background-position':'50% calc(20% - '+(.6*myscroll)+'px)'
+      });
+    } else {
+      el.css({
+        'position': 'absolute',
+        'bottom': 0
+      });
+      el2.css({
+        'bottom': 0,
+        'position': 'absolute'
+      });
+      header.css({
+        'position': 'fixed',
+        'z-index': 10
+      })
     }
   });
 });
@@ -42,7 +64,7 @@ function imgParallax() {
   if (window.innerWidth > 768) {
     $(function() {
       $(window).scroll(function() {
-        let altura1 = $('#header').height()
+        let altura1 = $('#header').height()*2
         let altura2 = $('#subHeader').height()
         let altura3 = $('#project').height()
         let alturaTotal = altura1 + altura2
@@ -50,7 +72,7 @@ function imgParallax() {
         if (myscroll > alturaTotal ){
           let el = $('#highView');
           var scroll = $(document).scrollTop() - alturaTotal
-          let scroll2 = scroll - altura3
+          let scroll2 = scroll - altura3 - 100
           el.css({
             'transform':'translateY('+(.4*scroll2)+'px)'
           });
@@ -62,7 +84,7 @@ function imgParallax() {
   if (window.matchMedia("(min-width: 576px) and (max-width: 767px)").matches) {
     $(function() {
       $(window).scroll(function() {
-        let altura1 = $('#header').height()
+        let altura1 = $('#header').height()*2
         let altura2 = $('#subHeader').height()
         let altura3 = $('#project').height()
         let alturaTotal = altura1 + altura2
@@ -70,7 +92,7 @@ function imgParallax() {
         if (myscroll > alturaTotal ){
           let el = $('#highView');
           var scroll = $(document).scrollTop() - alturaTotal
-          let scroll2 = scroll - altura3
+          let scroll2 = scroll - altura3 - 100
           el.css({
             'transform':'translateY('+(.4*scroll2)+'px)'
           });
@@ -82,7 +104,7 @@ function imgParallax() {
   if (window.innerWidth < 576) {
     $(function() {
       $(window).scroll(function() {
-        let altura1 = $('#header').height()
+        let altura1 = $('#header').height()*2
         let altura2 = $('#subHeader').height()
         let altura3 = $('#project').height()
         let alturaTotal = altura1 + altura2
@@ -90,7 +112,7 @@ function imgParallax() {
         if (myscroll > alturaTotal ){
           let el = $('#highView');
           var scroll = $(document).scrollTop() - alturaTotal
-          let scroll2 = scroll - altura3 + 140
+          let scroll2 = scroll - altura3 + 40
           el.css({
             'transform':'translate(30%, '+(.4*scroll2)+'px) scale(1.85)'
           });
@@ -126,6 +148,45 @@ $(function() {
         'transform':'translateY(calc(-30px + '+ (.08*suma) +'px))'
       })
     }
+  })
+});
+
+
+// -------------------------Water-Backgroud-Parallax-----------------------------
+
+$(function() {
+  $(window).scroll(function() {
+    let container = $("#subHeader")
+    let heightTop = container.position().top;
+    let scroll = $(window).scrollTop()
+    let heightElem = container.height()
+
+    let suma = scroll - (heightElem*3)
+
+    if (scroll > heightElem){
+      let el = $('#subHeader')
+      el.css({
+        'background-position-y':(.4*suma) +'px'
+      })
+    }
+  })
+});
+
+$(function() {
+  $(window).scroll(function() {
+    let container = $("#contacto")
+    let heightTop = container.position().top;
+    let scroll = $(window).scrollTop()
+    let heightElem = container.height()
+
+    let suma = scroll - heightTop
+
+    if (scroll > (heightTop - heightElem)){
+      let el = $('#contacto')
+      el.css({
+        'background-position-y':(.4*suma) +'px'
+      })
+    }    
   })
 });
 

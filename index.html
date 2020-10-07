@@ -80,39 +80,39 @@
           <a href="#contacto" class="menu-item">Contacto</a>
         </nav>
     </header>
-    <section id="header">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 pl-5 pl-md-3">
-            <p id="bannerText" class="h1">
-              Lanzamiento exclusivo<br />
-              <span>a pasos del World Trade Center Asunción</span>
-            </p>
-            <p id="bannerText" class="h1">10% de<br />rentabilidad anual</p>
-            <a id="bannerBtn" class="btn btn-primary" href="#contacto">
-              Consultar
-            </a>
+    <section id="BannerContainer">
+      <div id="header">
+        <div id="header2"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 pl-5 pl-md-3">
+              <p id="bannerText" class="h1">
+                Lanzamiento exclusivo<br />
+                <span>a pasos del World Trade Center Asunción</span>
+              </p>
+              <p id="bannerText" class="h1">10% de<br />rentabilidad anual</p>
+              <a id="bannerBtn" class="btn btn-primary" href="#contacto">
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="whatsappBtn">
+          <div class="row">
+            <div class="col-12">
+              <a
+                href="https://api.whatsapp.com/send?phone=59896207460&text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Mal%C3%A9%20by%20Continents."
+                target="_blank"
+              >
+                <button>
+                  <img src="assets/images/icons/whatsapp-white.png" alt="wpp" />
+                </button>
+                <span>Escribinos</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="container" id="whatsappBtn">
-        <div class="row">
-          <div class="col-12">
-            <a
-              href="https://api.whatsapp.com/send?phone=59896207460&text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Mal%C3%A9%20by%20Continents."
-              target="_blank"
-            >
-              <button>
-                <img src="assets/images/icons/whatsapp-white.png" alt="wpp" />
-              </button>
-              <span>Escribinos</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="prueba">
-      
     </section>
     <section id="subHeader">
       <div id="waves"></div>
@@ -154,7 +154,6 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-12 col-md-5" id="ubication">
-            <!-- <img src="assets/images/ubication.jpg" /> -->
           </div>
           <div class="col-12 col-md-7 projectText">
             <p class="h1 mb-3 titleHidden">
@@ -475,21 +474,8 @@
     <script src="assets/js/fancy-box/jquery.fancybox.min.js"></script>
     <script src="assets/js/lottie.min.js"></script>
     <script src="assets/js/bodymovin.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script>
-
-    var scene = new ScrollMagic.Scene({
-      triggerElement: '#prueba', // starting scene, when reaching this element
-      duration: 400 // pin the element for a total of 400px
-    })
-    .setPin('#prueba'); // the element we want to pin
-
-    // Add Scene to ScrollMagic Controller
-    controller.addScene(scene);
-    </script>
-    <script src="water.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/water.js"></script>
     <script src="assets/js/index.js"></script>
   </body>
 </html>
