@@ -74,15 +74,15 @@ img {
   transition: ease-in-out 0.3s;
 }
 
-.titleHidden{
+.titleHidden {
   opacity: 0;
   transform: translateY(-30px);
 }
 
-.titleShow{
+.titleShow {
   opacity: 1;
   transform: translateY(0);
-  transition: ease-in-out 1s
+  transition: ease-in-out 1s;
 }
 
 .subtitleBorder {
@@ -96,7 +96,7 @@ html {
   scroll-behavior: smooth;
 }
 
-header{
+header {
   top: 0;
   width: 100%;
   height: 70px;
@@ -165,28 +165,26 @@ header nav a:hover {
 
 #BannerContainer #header {
   position: fixed;
-  padding: 70px 0px 0px;
+  padding: 0;
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   background-image: url("../images/header.jpg");
-  background-position: 0 30%;
+  background-position: center 30%;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 1;
 }
 
 #BannerContainer #header2 {
-  position: absolute;
+  position: fixed;
   opacity: 0;
-  top:0;
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
   background-image: url("../images/headerdia.jpg");
-  background-position: 0 30%;
+  background-position: center 30%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -271,12 +269,13 @@ header nav a:hover {
   overflow: hidden;
   position: relative;
   z-index: 1;
-  margin-top: 200vh;
+  margin-top: 205vh;
   background-image: url("../images/water.jpg");
   background-repeat: no-repeat;
+  background-size: 200%;
 }
 
-#subHeader #waves{
+#subHeader #waves {
   position: absolute;
   height: auto;
   top: 0;
@@ -377,9 +376,13 @@ section#project {
   z-index: 1;
 }
 
-#location .container-highView{
-  max-width: 100%;
+#location .container-highView {
+  width: 100%;
   overflow: hidden;
+}
+
+#location .container-highView img {
+  width: 100%;
 }
 
 #location p.views {
@@ -450,24 +453,27 @@ section#project {
   padding-right: 0;
 }
 
-.fancybox-button, .fancybox-button:link, .fancybox-button:visited{
+.fancybox-button,
+.fancybox-button:link,
+.fancybox-button:visited {
   color: #fff;
   width: 55px;
   height: 55px;
 }
-.fancybox-button:hover{
+.fancybox-button:hover {
   color: #ccc;
 }
 
-.fancybox-button.fancybox-button--arrow_right, .fancybox-button.fancybox-button--arrow_left{
+.fancybox-button.fancybox-button--arrow_right,
+.fancybox-button.fancybox-button--arrow_left {
   width: 80px;
   height: 110px;
 }
 
-.fancybox-button>div {
+.fancybox-button > div {
   color: #fff;
 }
-.fancybox-button:hover>div {
+.fancybox-button:hover > div {
   color: #ccc;
 }
 
@@ -550,7 +556,7 @@ section#amenities .facilities {
   grid-template-columns: 1fr 1fr;
 }
 
-#amenities .title{
+#amenities .title {
   z-index: 1;
   background: #fff;
   position: relative;
@@ -571,17 +577,20 @@ section#amenities .facilities {
   width: 92%;
 }
 
-#amenities .item, #rental .rental .item {
+#amenities .item,
+#rental .rental .item {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
 }
 
-#amenities .item svg, #rental .rental .item svg {
-  width: 100px!important;
+#amenities .item svg,
+#rental .rental .item svg {
+  width: 100px !important;
 }
 
-#amenities .item p, #rental .rental .item p {
+#amenities .item p,
+#rental .rental .item p {
   text-align: center;
   font-size: 1rem;
   line-height: 18px;
@@ -645,6 +654,7 @@ section#amenities .facilities {
   overflow: hidden;
   background-image: url("../images/water.jpg");
   background-repeat: no-repeat;
+  background-size: 150%;
 }
 
 section#contacto:before {
@@ -682,10 +692,10 @@ section#contacto:before {
 #contacto .left form .form-control {
   background-color: #ffffffd6;
   transition: all ease-in-out 0.3s;
-  height: calc(1.5em + .75rem + 12px);
+  height: calc(1.5em + 0.75rem + 12px);
 }
 
-#contacto .left form textarea.form-control{
+#contacto .left form textarea.form-control {
   height: auto;
   resize: none;
 }
@@ -750,13 +760,13 @@ section#contacto:before {
 
 /*---------------------Querys--------------------*/
 
-
-@media (max-width: 1199.98px) { 
-  :root{
+@media (max-width: 1199.98px) {
+  :root {
     font-size: 14px;
   }
-  #subHeader .col-right img, #subHeader p{
-    margin-bottom: 10px!important;
+  #subHeader .col-right img,
+  #subHeader p {
+    margin-bottom: 10px !important;
   }
   #project .projectText {
     padding-left: 0;
@@ -768,7 +778,10 @@ section#contacto:before {
   :root {
     font-size: 12px;
   }
-  header>.containerHeader {
+  header {
+    height: 50px;
+  }
+  header > .containerHeader {
     height: 50px;
     padding: 10px 7%;
   }
@@ -787,13 +800,13 @@ section#contacto:before {
     border-bottom: solid 3px var(--primary);
     z-index: 9;
     opacity: 0;
-    transform: translateY(-200px);
-    transition: cubic-bezier(1, 0, 1, 1) .8s
+    transform: translateY(-250px);
+    transition: cubic-bezier(1, 0, 1, 1) 0.8s;
   }
   header nav#menu.show {
     opacity: 1;
     transform: translateY(0);
-    transition: cubic-bezier(0, 0, 0.2, 1) 1s
+    transition: cubic-bezier(0, 0, 0.2, 1) 1s;
   }
   header nav a {
     border-top: solid 3px var(--primary);
@@ -811,10 +824,23 @@ section#contacto:before {
     background-position: top;
   }
   #header div#whatsappBtn button img {
-      width: 30px;
+    width: 30px;
   }
-  #subHeader, #subHeader .container, #subHeader .col-left, #subHeader .col-right {
+  #BannerContainer #header {
+    position: relative;
+  }
+  #BannerContainer #header2 {
+    display: none;
+  }
+  #subHeader,
+  #subHeader .container,
+  #subHeader .col-left,
+  #subHeader .col-right {
     min-height: auto;
+  }
+  #subHeader {
+    margin-top: 0;
+    background-size: 200%;
   }
   #subHeader #waves {
     width: auto;
@@ -825,10 +851,12 @@ section#contacto:before {
   #units ul.listFancyBox {
     font-size: 1rem;
   }
-  #amenities .item svg, #rental .rental .item svg {
-    width: 80px!important;
+  #amenities .item svg,
+  #rental .rental .item svg {
+    width: 80px !important;
   }
-  #amenities .item p, #rental .rental .item p {
+  #amenities .item p,
+  #rental .rental .item p {
     font-size: 1.2rem;
     line-height: 20px;
   }
@@ -849,12 +877,18 @@ section#contacto:before {
   #rental .rental .rentalImg .item:last-child p {
     margin-left: 0px;
   }
+  #contacto {
+    background-size: 200%;
+  }
   #contacto #waves2 {
     width: auto;
   }
 }
 
 @media (max-width: 767.98px) {
+  #subHeader {
+    background-size: 300%;
+  }
   #project .projectText {
     padding-left: 15px;
     padding-top: 30px;
@@ -868,15 +902,18 @@ section#contacto:before {
   #units .fancyImgBox div.fancyBox:not(:first-child) {
     padding-top: 50px;
   }
-  .fancybox-button, .fancybox-button:link, .fancybox-button:visited{
+  .fancybox-button,
+  .fancybox-button:link,
+  .fancybox-button:visited {
     width: 45px;
     height: 45px;
   }
-  .fancybox-button.fancybox-button--arrow_right, .fancybox-button.fancybox-button--arrow_left{
+  .fancybox-button.fancybox-button--arrow_right,
+  .fancybox-button.fancybox-button--arrow_left {
     width: 70px;
     height: 100px;
   }
-  #rental .imgRental{
+  #rental .imgRental {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -886,13 +923,15 @@ section#contacto:before {
   #contacto .container .row:not(.footer) {
     padding-top: 0px;
   }
-  #contacto .right, #contacto .left {
+  #contacto .right,
+  #contacto .left {
     padding-top: 50px;
   }
-  #contacto .right p, #contacto .right a {
+  #contacto .right p,
+  #contacto .right a {
     text-align: left;
   }
-  #contacto .right a{
+  #contacto .right a {
     margin-bottom: 40px;
   }
   #contacto .right img {
@@ -906,6 +945,7 @@ section#contacto:before {
   }
   #contacto {
     padding: 10px 0 0;
+    background-size: 300%;
   }
   .footer img {
     height: 30px;
@@ -913,10 +953,12 @@ section#contacto:before {
 }
 
 @media (max-width: 575.98px) {
-  h1, p.h1 {
-    font-size: 2rem;
+  h1,
+  p.h1 {
+    font-size: 2rem !important;
   }
-  h3, p.h3 {
+  h3,
+  p.h3 {
     font-size: 1.4rem;
     font-weight: 300;
   }
@@ -939,6 +981,9 @@ section#contacto:before {
   #header div#whatsappBtn a span {
     padding: 3px 7px;
     font-size: 1rem;
+  }
+  #subHeader {
+    background-size: 500%;
   }
   #project .projectText p.paragraph {
     line-height: 20px;
@@ -967,7 +1012,7 @@ section#contacto:before {
     right: 2px;
   }
   #amenities .item svg {
-    width: 60px!important;
+    width: 60px !important;
   }
   #rental .rental {
     margin: 50px 0;
@@ -978,6 +1023,9 @@ section#contacto:before {
   }
   #rental .rental .rentalImg .item:last-child img {
     margin-left: 2px;
+  }
+  #contacto {
+    background-size: 500%;
   }
   #contacto .left p {
     font-size: 2.3rem;

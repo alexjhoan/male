@@ -22,21 +22,22 @@ $(document).ready(function(){
   });
 });
 
-// parallax efects
+// -----------------------Banner-Parallax----------------------
 
-$(function() {
-  $(window).scroll(function() {
-    let alturaHeader = $('#header').height()
-    let myscroll = $(window).scrollTop()
-    let el = $('#header');
-    let el2 = $('#header2');
-    let header = $('header')
-    if (myscroll < (alturaHeader + 72) ){
+function bannerParallax() {
+  let alturaHeader = $('#header').height()
+  let myscroll = $(window).scrollTop()
+  let el = $('#header');
+  let el2 = $('#header2');
+  let header = $('header')
+  if (window.innerWidth > 991) {
+    if (myscroll < (alturaHeader * 1.0518) ){
       el.css({
         'position': 'fixed',
         // 'background-position':'50% calc(20% - '+(.6*myscroll)+'px)'
       });
       el2.css({
+        'position': 'fixed',
         'opacity': myscroll/(alturaHeader),
         // 'background-position':'50% calc(20% - '+(.6*myscroll)+'px)'
       });
@@ -46,147 +47,233 @@ $(function() {
         'bottom': 0
       });
       el2.css({
-        'bottom': 0,
-        'position': 'absolute'
+        'position': 'absolute',
+        'bottom': 0
       });
       header.css({
         'position': 'fixed',
         'z-index': 10
       })
     }
-  });
-});
-
-
-
-function imgParallax() {
-  let checkWidth = jQuery(window).width();
-  if (window.innerWidth > 768) {
-    $(function() {
-      $(window).scroll(function() {
-        let altura1 = $('#header').height()*2
-        let altura2 = $('#subHeader').height()
-        let altura3 = $('#project').height()
-        let alturaTotal = altura1 + altura2
-        let myscroll = $(window).scrollTop()
-        if (myscroll > alturaTotal ){
-          let el = $('#highView');
-          var scroll = $(document).scrollTop() - alturaTotal
-          let scroll2 = scroll - altura3 - 100
-          el.css({
-            'transform':'translateY('+(.4*scroll2)+'px)'
-          });
-        }
-      });
-    });
   }
+}
 
-  if (window.matchMedia("(min-width: 576px) and (max-width: 767px)").matches) {
-    $(function() {
-      $(window).scroll(function() {
-        let altura1 = $('#header').height()*2
-        let altura2 = $('#subHeader').height()
-        let altura3 = $('#project').height()
-        let alturaTotal = altura1 + altura2
-        let myscroll = $(window).scrollTop()
-        if (myscroll > alturaTotal ){
-          let el = $('#highView');
-          var scroll = $(document).scrollTop() - alturaTotal
-          let scroll2 = scroll - altura3 - 100
-          el.css({
-            'transform':'translateY('+(.4*scroll2)+'px)'
-          });
-        }
-      });
-    });
+function xs_bannerParallax() {
+  let container = $("#header")
+  let heightElem = container.height()
+  let scroll = $(window).scrollTop()
+  if ((scroll > 0) && (scroll < heightElem)){
+    let el = $('#header')
+    el.css({
+      'background-position':'center calc(30% + '+(.4*scroll)+'px)'
+    })
   }
+}
 
-  if (window.innerWidth < 576) {
-    $(function() {
-      $(window).scroll(function() {
-        let altura1 = $('#header').height()*2
-        let altura2 = $('#subHeader').height()
-        let altura3 = $('#project').height()
-        let alturaTotal = altura1 + altura2
-        let myscroll = $(window).scrollTop()
-        if (myscroll > alturaTotal ){
-          let el = $('#highView');
-          var scroll = $(document).scrollTop() - alturaTotal
-          let scroll2 = scroll - altura3 + 40
-          el.css({
-            'transform':'translate(30%, '+(.4*scroll2)+'px) scale(1.85)'
-          });
-        }
-      });
+// -----------------------High-View-Paralax------------------------
+
+function xs_highView() {
+  let altura1 = $('#header').height()
+  let altura2 = $('#subHeader').height()
+  let altura3 = $('#project').height()
+  let alturaTotal = altura1 + altura2
+  let myscroll = $(window).scrollTop()
+  if (myscroll > alturaTotal ){
+    let el = $('#highView');
+    var scroll = $(document).scrollTop() - alturaTotal
+    let scroll2 = scroll - altura3 + 40
+    el.css({
+      'transform':'translate(30%, '+(.4*scroll2)+'px) scale(1.85)'
     });
   }
 }
 
-imgParallax()
-jQuery(window).resize(imgParallax);
+function md_highView() {
+  let altura1 = $('#header').height()
+  let altura2 = $('#subHeader').height()
+  let altura3 = $('#project').height()
+  let alturaTotal = altura1 + altura2
+  let myscroll = $(window).scrollTop()
+  if (myscroll > alturaTotal ){
+    let el = $('#highView');
+    var scroll = $(document).scrollTop() - alturaTotal
+    let scroll2 = scroll - altura3 - 80
+    el.css({
+      'transform':'translateY('+(.4*scroll2)+'px) scale(1.5)'
+    });
+  }
+}
+
+function lg_highView() {
+  let altura1 = $('#header').height()
+  let altura2 = $('#subHeader').height()
+  let altura3 = $('#project').height()
+  let alturaTotal = altura1 + altura2
+  let myscroll = $(window).scrollTop()
+  if (myscroll > alturaTotal ){
+    let el = $('#highView');
+    var scroll = $(document).scrollTop() - alturaTotal
+    let scroll2 = scroll - altura3 - 80
+    el.css({
+      'transform':'translateY('+(.4*scroll2)+'px) scale(1.3)'
+    });
+  }
+}
+
+function xl_highView() {
+  let altura1 = $('#header').height()*2
+  let altura2 = $('#subHeader').height()
+  let altura3 = $('#project').height()
+  let alturaTotal = altura1 + altura2
+  let myscroll = $(window).scrollTop()
+  if (myscroll > alturaTotal ){
+    let el = $('#highView');
+    var scroll = $(document).scrollTop() - alturaTotal
+    let scroll2 = scroll - altura3 - 80
+    el.css({
+      'transform':'translateY('+(.4*scroll2)+'px)'
+    });
+  }
+}
+
+function highView() {
+  if (window.innerWidth > 992) {
+    xl_highView()
+  }
+  if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
+    lg_highView()
+  }
+  if (window.matchMedia("(min-width: 576px) and (max-width: 767px)").matches) {
+    md_highView()
+  }
+  if (window.innerWidth < 576) {
+    xs_highView()
+  }
+}
 
 // ------------------------------Amenities-Parallax-----------------------------
 
-$(function() {
-  $(window).scroll(function() {
-    let container = $("#amenities")
-    let heightTop = container.position().top;
-    let scroll = $(window).scrollTop()
-    let heightElem = container.height()
-
-    let suma = scroll - heightTop
-
-    if (scroll > (heightTop - heightElem)){
-      let el = $('#edfAmenities')
-      el.css({
-        'transform':'translateY(calc(-30px + '+ (.15*suma) +'px))'
-      })
-    }
-    if (scroll > (heightTop - heightElem)){
-      let el = $('#linea-turquesa')
-      el.css({
-        'transform':'translateY(calc(-30px + '+ (.08*suma) +'px))'
-      })
-    }
-  })
-});
-
+function amenities() {
+  let container = $("#amenities")
+  let heightTop = container.position().top;
+  let scroll = $(window).scrollTop()
+  let heightElem = container.height()
+  let suma = scroll - heightTop
+  if ((scroll > (heightTop - heightElem)) && (scroll < (heightTop + heightElem))){
+    let el = $('#edfAmenities')
+    el.css({
+      'transform':'translateY(calc(-30px + '+ (.15*suma) +'px))'
+    })
+  }
+  if ((scroll > (heightTop - heightElem)) && (scroll < (heightTop + heightElem))){
+    let el = $('#linea-turquesa')
+    el.css({
+      'transform':'translateY(calc(-30px + '+ (.08*suma) +'px))'
+    })
+  }
+}
 
 // -------------------------Water-Backgroud-Parallax-----------------------------
 
+function xs_subHeader() {
+  let container = $("#subHeader")
+  let heightTop = container.position().top;
+  let scroll = $(window).scrollTop()
+  let heightElem = container.height()
+  let suma = scroll - heightTop
+  if ((scroll > (heightTop - heightElem)) && (scroll < (heightElem + heightTop))){
+    let el = $('#subHeader')
+    el.css({
+      'background-position-y':(.4*suma) +'px'
+    })
+  }
+}
+
+function lg_subHeader() {
+  let container = $("#subHeader")
+  let heightTop = container.position().top;
+  let scroll = $(window).scrollTop()
+  let heightElem = container.height()
+
+  let suma = scroll - (heightElem*3)
+
+  if ((scroll > heightElem) && (scroll < (heightElem*3))){
+    let el = $('#subHeader')
+    el.css({
+      'background-position-y':(.4*suma) +'px'
+    })
+  }
+}
+
+function bg_subHeader() {
+   if (window.innerWidth < 992) {
+    xs_subHeader()
+  } else {
+    lg_subHeader()
+  }
+}
+
+function bg_contacto() {
+  let container = $("#contacto")
+  let heightTop = container.position().top;
+  let scroll = $(window).scrollTop()
+  let heightElem = container.height()
+  let suma = scroll - heightTop
+  if (scroll > (heightTop - heightElem)){
+    let el = $('#contacto')
+    el.css({
+      'background-position-y':(.4*suma) +'px'
+    })
+  }
+}
+
+// ---------------------------title-hidden--------------------------
+
+// determina si un elemento comienza a ser visible
+function isElementVisible(container){
+  let viewScrollTop = $(window).scrollTop(); // distancia de scroll superior
+  let viewBottom = viewScrollTop + $(window).height(); // distancia de scroll + el alto actual de window (lo no visible por scroll + lo visible)
+  let topElemD = $(container).offset().top + 250; // distancia desde el elemento hasta el tope superior del viewport
+  return (topElemD < viewBottom);
+}
+
+// ------------------------All-Parallax------------------------------
+
 $(function() {
   $(window).scroll(function() {
-    let container = $("#subHeader")
-    let heightTop = container.position().top;
-    let scroll = $(window).scrollTop()
-    let heightElem = container.height()
-
-    let suma = scroll - (heightElem*3)
-
-    if (scroll > heightElem){
-      let el = $('#subHeader')
-      el.css({
-        'background-position-y':(.4*suma) +'px'
-      })
+    if (window.innerWidth < 992) {
+      xs_bannerParallax()
+    } else {
+      bannerParallax()
     }
-  })
-});
+    bg_subHeader()
+    highView()
+    amenities()
+    bg_contacto()
 
-$(function() {
-  $(window).scroll(function() {
-    let container = $("#contacto")
-    let heightTop = container.position().top;
-    let scroll = $(window).scrollTop()
-    let heightElem = container.height()
+    let container = $('#project');
+    let elem = $("#project .titleHidden")
+    isElementVisible(container) ? elem.addClass('titleShow') : null; 
 
-    let suma = scroll - heightTop
+    let container1 = $('#location');
+    let elem1 = $("#location .titleHidden")
+    isElementVisible(container1) ? elem1.addClass('titleShow') : null; 
 
-    if (scroll > (heightTop - heightElem)){
-      let el = $('#contacto')
-      el.css({
-        'background-position-y':(.4*suma) +'px'
-      })
-    }    
+    let container2 = $('#units');
+    let elem2 = $("#units .titleHidden")
+    isElementVisible(container2) ? elem2.addClass('titleShow') : null; 
+
+    let container3 = $('#amenities');
+    let elem3 = $("#amenities .titleHidden")
+    isElementVisible(container3) ? elem3.addClass('titleShow') : null;
+
+    let container4 = $('#rental');
+    let elem4 = $("#rental .titleHidden")
+    isElementVisible(container4) ? elem4.addClass('titleShow') : null; 
+
+    let container5 = $('#contacto');
+    let elem5 = $("#contacto .titleHidden")
+    isElementVisible(container5) ? elem5.addClass('titleShow') : null; 
   })
 });
 
@@ -311,38 +398,3 @@ function toggleMenu() {
   const element = document.getElementById("menu");
   element.classList.toggle("show");
 }
-
-// determina si un elemento comienza a ser visible
-function isElementVisible(container){
-  let viewScrollTop = $(window).scrollTop(); // distancia de scroll superior
-  let viewBottom = viewScrollTop + $(window).height(); // distancia de scroll + el alto actual de window (lo no visible por scroll + lo visible)
-  let topElemD = $(container).offset().top + 250; // distancia desde el elemento hasta el tope superior del viewport
-  return (topElemD < viewBottom);
-}
-
-
-$(window).on("scroll" ,function() {
-  let container = $('#project');
-  let elem = $("#project .titleHidden")
-  isElementVisible(container) ? elem.addClass('titleShow') : null; 
-
-  let container1 = $('#location');
-  let elem1 = $("#location .titleHidden")
-  isElementVisible(container1) ? elem1.addClass('titleShow') : null; 
-
-  let container2 = $('#units');
-  let elem2 = $("#units .titleHidden")
-  isElementVisible(container2) ? elem2.addClass('titleShow') : null; 
-
-  let container3 = $('#amenities');
-  let elem3 = $("#amenities .titleHidden")
-  isElementVisible(container3) ? elem3.addClass('titleShow') : null;
-
-  let container4 = $('#rental');
-  let elem4 = $("#rental .titleHidden")
-  isElementVisible(container4) ? elem4.addClass('titleShow') : null; 
-
-  let container5 = $('#contacto');
-  let elem5 = $("#contacto .titleHidden")
-  isElementVisible(container5) ? elem5.addClass('titleShow') : null; 
-});
