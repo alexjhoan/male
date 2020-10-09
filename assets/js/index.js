@@ -62,10 +62,10 @@ function xs_bannerParallax() {
   let container = $("#header")
   let heightElem = container.height()
   let scroll = $(window).scrollTop()
-  if ((scroll > 0) && (scroll < heightElem)){
+  if ((scroll >= 0) && (scroll < heightElem)){
     let el = $('#header')
     el.css({
-      'background-position':'center calc(30% + '+(.4*scroll)+'px)'
+      'background-position':'center '+(.4*scroll)+'px'
     })
   }
 }
@@ -83,7 +83,7 @@ function xs_highView() {
     var scroll = $(document).scrollTop() - alturaTotal
     let scroll2 = scroll - altura3 + 40
     el.css({
-      'transform':'translate(30%, '+(.4*scroll2)+'px) scale(1.85)'
+      'transform':'translate(30%, '+(.3*scroll2)+'px) scale(1.85)'
     });
   }
 }
@@ -99,7 +99,7 @@ function md_highView() {
     var scroll = $(document).scrollTop() - alturaTotal
     let scroll2 = scroll - altura3 - 80
     el.css({
-      'transform':'translateY('+(.4*scroll2)+'px) scale(1.5)'
+      'transform':'translateY('+(.3*scroll2)+'px) scale(1.5)'
     });
   }
 }
