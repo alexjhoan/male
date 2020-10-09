@@ -10,21 +10,33 @@ lottie.loadAnimation({
 
 $(window).on("scroll" ,function() {
 	let elem = $('#imgMap')
-	let viewScrollTop = $(window).scrollTop(); 
+	let scroll = $(window).scrollTop(); 
   let topElemD = elem.position().top - 110;
   let heightElem = elem.height()
   let total = topElemD - heightElem
   let total2 = topElemD + heightElem
 
-  if (viewScrollTop > total) {
-  	lottie.play("map")
-  	
-  } else {
-  	lottie.stop("map")
+  if (window.innerWidth > 991){
+    if (scroll > total) {
+      lottie.play("map")
+    } else {
+      lottie.stop("map")
+    }
+    if (scroll > total2) {
+      lottie.stop("map")
+    }
   }
 
-  if (viewScrollTop > total2) {
-  	lottie.stop("map")
+  if (window.innerWidth < 992){
+    if (scroll > (total/1.2)) {
+      lottie.play("map")
+    }
+    if (scroll < (total/1.2)) {
+      lottie.stop("map")
+    }
+    if (scroll > total2) {
+      lottie.stop("map")
+    }
   }
 })
 
