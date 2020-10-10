@@ -81,7 +81,7 @@ function xs_highView() {
   if (myscroll > alturaTotal ){
     let el = $('#highView');
     var scroll = $(document).scrollTop() - alturaTotal
-    let scroll2 = scroll - altura3 + 40
+    let scroll2 = scroll - altura3 + 120
     el.css({
       'transform':'translate(30%, '+(.3*scroll2)+'px) scale(1.85)'
     });
