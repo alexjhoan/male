@@ -4,303 +4,306 @@ $('[data-fancybox="gallery"]').fancybox({
   animationEffect: "fade",
   arrows: true,
   infobar: false,
-  buttons: [
-    "zoom",
-    "close"
-  ]
+  buttons: ["zoom", "close"]
 });
 
 // OwlCarousel
 
-$(document).ready(function(){
+$(document).ready(function () {
   $(".owl-carousel").owlCarousel({
-    loop:true,
-    margin:10,
+    loop: true,
+    margin: 10,
     dots: true,
-    nav:true,
-    items:1
+    nav: true,
+    items: 1
   });
 });
 
 // -----------------------Banner-Parallax----------------------
 
 function bannerParallax() {
-  let alturaHeader = $('#header').height()
-  let myscroll = $(window).scrollTop()
-  let el = $('#header');
-  let el2 = $('#header2');
-  let header = $('header')
+  let alturaHeader = $("#header").height();
+  let myscroll = $(window).scrollTop();
+  let el = $("#header");
+  let el2 = $("#header2");
+  let header = $("header");
   if (window.innerWidth > 991) {
-    if (myscroll < (alturaHeader * 1.0518) ){
+    if (myscroll < alturaHeader * 1.0518) {
       el.css({
-        'position': 'fixed',
+        position: "fixed"
         // 'background-position':'50% calc(20% - '+(.6*myscroll)+'px)'
       });
       el2.css({
-        'position': 'fixed',
-        'opacity': myscroll/(alturaHeader),
+        position: "fixed",
+        opacity: myscroll / alturaHeader
         // 'background-position':'50% calc(20% - '+(.6*myscroll)+'px)'
       });
     } else {
       el.css({
-        'position': 'absolute',
-        'bottom': 0
+        position: "absolute",
+        bottom: 0
       });
       el2.css({
-        'position': 'absolute',
-        'bottom': 0
+        position: "absolute",
+        bottom: 0
       });
       header.css({
-        'position': 'fixed',
-        'z-index': 10
-      })
+        position: "fixed",
+        "z-index": 10
+      });
     }
   }
 }
 
 function xs_bannerParallax() {
-  let container = $("#header")
-  let heightElem = container.height()
-  let scroll = $(window).scrollTop()
-  if ((scroll >= 0) && (scroll < heightElem)){
-    let el = $('#header')
+  let container = $("#header");
+  let heightElem = container.height();
+  let scroll = $(window).scrollTop();
+  if (scroll >= 0 && scroll < heightElem) {
+    let el = $("#header");
     el.css({
-      'background-position':'center '+(.4*scroll)+'px'
-    })
+      "background-position": "center " + 0.4 * scroll + "px"
+    });
   }
 }
 
 // -----------------------High-View-Paralax------------------------
 
 function xs_highView() {
-  let altura1 = $('#header').height()
-  let altura2 = $('#subHeader').height()
-  let altura3 = $('#project').height()
-  let alturaTotal = altura1 + altura2
-  let myscroll = $(window).scrollTop()
-  if (myscroll > alturaTotal ){
-    let el = $('#highView');
-    var scroll = $(document).scrollTop() - alturaTotal
-    let scroll2 = scroll - altura3 + 120
+  let altura1 = $("#header").height();
+  let altura2 = $("#subHeader").height();
+  let altura3 = $("#project").height();
+  let alturaTotal = altura1 + altura2;
+  let myscroll = $(window).scrollTop();
+  if (myscroll > alturaTotal) {
+    let el = $("#highView");
+    var scroll = $(document).scrollTop() - alturaTotal;
+    let scroll2 = scroll - altura3 + 120;
     el.css({
-      'transform':'translate(30%, '+(.3*scroll2)+'px) scale(1.85)'
+      transform: "translate(30%, " + 0.3 * scroll2 + "px) scale(1.85)"
     });
   }
 }
 
 function md_highView() {
-  let altura1 = $('#header').height()
-  let altura2 = $('#subHeader').height()
-  let altura3 = $('#project').height()
-  let alturaTotal = altura1 + altura2
-  let myscroll = $(window).scrollTop()
-  if (myscroll > alturaTotal ){
-    let el = $('#highView');
-    var scroll = $(document).scrollTop() - alturaTotal
-    let scroll2 = scroll - altura3 - 80
+  let altura1 = $("#header").height();
+  let altura2 = $("#subHeader").height();
+  let altura3 = $("#project").height();
+  let alturaTotal = altura1 + altura2;
+  let myscroll = $(window).scrollTop();
+  if (myscroll > alturaTotal) {
+    let el = $("#highView");
+    var scroll = $(document).scrollTop() - alturaTotal;
+    let scroll2 = scroll - altura3 - 80;
     el.css({
-      'transform':'translateY('+(.3*scroll2)+'px) scale(1.5)'
+      transform: "translateY(" + 0.3 * scroll2 + "px) scale(1.5)"
     });
   }
 }
 
 function lg_highView() {
-  let altura1 = $('#header').height()
-  let altura2 = $('#subHeader').height()
-  let altura3 = $('#project').height()
-  let alturaTotal = altura1 + altura2
-  let myscroll = $(window).scrollTop()
-  if (myscroll > alturaTotal ){
-    let el = $('#highView');
-    var scroll = $(document).scrollTop() - alturaTotal
-    let scroll2 = scroll - altura3 - 80
+  let altura1 = $("#header").height();
+  let altura2 = $("#subHeader").height();
+  let altura3 = $("#project").height();
+  let alturaTotal = altura1 + altura2;
+  let myscroll = $(window).scrollTop();
+  if (myscroll > alturaTotal) {
+    let el = $("#highView");
+    var scroll = $(document).scrollTop() - alturaTotal;
+    let scroll2 = scroll - altura3 - 80;
     el.css({
-      'transform':'translateY('+(.4*scroll2)+'px) scale(1.3)'
+      transform: "translateY(" + 0.4 * scroll2 + "px) scale(1.3)"
     });
   }
 }
 
 function xl_highView() {
-  let altura1 = $('#header').height()*2
-  let altura2 = $('#subHeader').height()
-  let altura3 = $('#project').height()
-  let alturaTotal = altura1 + altura2
-  let myscroll = $(window).scrollTop()
-  if (myscroll > alturaTotal ){
-    let el = $('#highView');
-    var scroll = $(document).scrollTop() - alturaTotal
-    let scroll2 = scroll - altura3 - 80
+  let altura1 = $("#header").height() * 2;
+  let altura2 = $("#subHeader").height();
+  let altura3 = $("#project").height();
+  let alturaTotal = altura1 + altura2;
+  let myscroll = $(window).scrollTop();
+  if (myscroll > alturaTotal) {
+    let el = $("#highView");
+    var scroll = $(document).scrollTop() - alturaTotal;
+    let scroll2 = scroll - altura3 - 80;
     el.css({
-      'transform':'translateY('+(.4*scroll2)+'px)'
+      transform: "translateY(" + 0.4 * scroll2 + "px)"
     });
   }
 }
 
 function highView() {
   if (window.innerWidth > 992) {
-    xl_highView()
+    xl_highView();
   }
   if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
-    lg_highView()
+    lg_highView();
   }
   if (window.matchMedia("(min-width: 576px) and (max-width: 767px)").matches) {
-    md_highView()
+    md_highView();
   }
   if (window.innerWidth < 576) {
-    xs_highView()
+    xs_highView();
   }
 }
 
 // ------------------------------Amenities-Parallax-----------------------------
 
 function amenities() {
-  let container = $("#amenities")
+  let container = $("#amenities");
   let heightTop = container.position().top;
-  let scroll = $(window).scrollTop()
-  let heightElem = container.height()
-  let suma = scroll - heightTop
-  if ((scroll > (heightTop - heightElem)) && (scroll < (heightTop + heightElem))){
-    let el = $('#edfAmenities')
+  let scroll = $(window).scrollTop();
+  let heightElem = container.height();
+  let suma = scroll - heightTop;
+  if (scroll > heightTop - heightElem && scroll < heightTop + heightElem) {
+    let el = $("#edfAmenities");
     el.css({
-      'transform':'translateY(calc(-30px + '+ (.15*suma) +'px))'
-    })
+      transform: "translateY(calc(-30px + " + 0.15 * suma + "px))"
+    });
   }
-  if ((scroll > (heightTop - heightElem)) && (scroll < (heightTop + heightElem))){
-    let el = $('#linea-turquesa')
+  if (scroll > heightTop - heightElem && scroll < heightTop + heightElem) {
+    let el = $("#linea-turquesa");
     el.css({
-      'transform':'translateY(calc(-30px + '+ (.08*suma) +'px))'
-    })
+      transform: "translateY(calc(-30px + " + 0.08 * suma + "px))"
+    });
   }
 }
 
 // -------------------------Water-Backgroud-Parallax-----------------------------
 
 function xs_subHeader() {
-  let container = $("#subHeader")
+  let container = $("#subHeader");
   let heightTop = container.position().top;
-  let scroll = $(window).scrollTop()
-  let heightElem = container.height()
-  let suma = scroll - heightTop
-  if ((scroll > (heightTop - heightElem)) && (scroll < (heightElem + heightTop))){
-    let el = $('#subHeader')
+  let scroll = $(window).scrollTop();
+  let heightElem = container.height();
+  let suma = scroll - heightTop;
+  if (scroll > heightTop - heightElem && scroll < heightElem + heightTop) {
+    let el = $("#subHeader");
     el.css({
-      'background-position-y':(.4*suma) +'px'
-    })
+      "background-position-y": 0.4 * suma + "px"
+    });
   }
 }
 
 function lg_subHeader() {
-  let container = $("#subHeader")
+  let container = $("#subHeader");
   let heightTop = container.position().top;
-  let scroll = $(window).scrollTop()
-  let heightElem = container.height()
+  let scroll = $(window).scrollTop();
+  let heightElem = container.height();
 
-  let suma = scroll - (heightElem*3)
+  let suma = scroll - heightElem * 3;
 
-  if ((scroll > heightElem) && (scroll < (heightElem*3))){
-    let el = $('#subHeader')
+  if (scroll > heightElem && scroll < heightElem * 3) {
+    let el = $("#subHeader");
     el.css({
-      'background-position-y':(.4*suma) +'px'
-    })
+      "background-position-y": 0.4 * suma + "px"
+    });
   }
 }
 
 function bg_subHeader() {
-   if (window.innerWidth < 992) {
-    xs_subHeader()
+  if (window.innerWidth < 992) {
+    xs_subHeader();
   } else {
-    lg_subHeader()
+    lg_subHeader();
   }
 }
 
 function bg_contacto() {
-  let container = $("#contacto")
+  let container = $("#contacto");
   let heightTop = container.position().top;
-  let scroll = $(window).scrollTop()
-  let heightElem = container.height()
-  let suma = scroll - heightTop
-  if (scroll > (heightTop - heightElem)){
-    let el = $('#contacto')
+  let scroll = $(window).scrollTop();
+  let heightElem = container.height();
+  let suma = scroll - heightTop;
+  if (scroll > heightTop - heightElem) {
+    let el = $("#contacto");
     el.css({
-      'background-position-y':(.4*suma) +'px'
-    })
+      "background-position-y": 0.4 * suma + "px"
+    });
   }
 }
 
 // ---------------------------title-hidden--------------------------
 
 // determina si un elemento comienza a ser visible
-function isElementVisible(container){
+function isElementVisible(container) {
   let viewScrollTop = $(window).scrollTop(); // distancia de scroll superior
   let viewBottom = viewScrollTop + $(window).height(); // distancia de scroll + el alto actual de window (lo no visible por scroll + lo visible)
   let topElemD = $(container).offset().top + 250; // distancia desde el elemento hasta el tope superior del viewport
-  return (topElemD < viewBottom);
+  return topElemD < viewBottom;
 }
 
 // ------------------------All-Parallax------------------------------
 
-$(function() {
-  $(window).scroll(function() {
+$(function () {
+  $(window).scroll(function () {
     if (window.innerWidth < 992) {
-      xs_bannerParallax()
+      xs_bannerParallax();
     } else {
-      bannerParallax()
+      bannerParallax();
     }
-    bg_subHeader()
-    highView()
-    amenities()
-    bg_contacto()
+    bg_subHeader();
+    highView();
+    amenities();
+    bg_contacto();
 
-    let container = $('#project');
-    let elem = $("#project .titleHidden")
-    isElementVisible(container) ? elem.addClass('titleShow') : null; 
+    let container = $("#project");
+    let elem = $("#project .titleHidden");
+    isElementVisible(container) ? elem.addClass("titleShow") : null;
 
-    let container1 = $('#location');
-    let elem1 = $("#location .titleHidden")
-    isElementVisible(container1) ? elem1.addClass('titleShow') : null; 
+    let container1 = $("#location");
+    let elem1 = $("#location .titleHidden");
+    isElementVisible(container1) ? elem1.addClass("titleShow") : null;
 
-    let container2 = $('#units');
-    let elem2 = $("#units .titleHidden")
-    isElementVisible(container2) ? elem2.addClass('titleShow') : null; 
+    let container2 = $("#units");
+    let elem2 = $("#units .titleHidden");
+    isElementVisible(container2) ? elem2.addClass("titleShow") : null;
 
-    let container3 = $('#amenities');
-    let elem3 = $("#amenities .titleHidden")
-    isElementVisible(container3) ? elem3.addClass('titleShow') : null;
+    let container3 = $("#amenities");
+    let elem3 = $("#amenities .titleHidden");
+    isElementVisible(container3) ? elem3.addClass("titleShow") : null;
 
-    let container4 = $('#rental');
-    let elem4 = $("#rental .titleHidden")
-    isElementVisible(container4) ? elem4.addClass('titleShow') : null; 
+    let container4 = $("#rental");
+    let elem4 = $("#rental .titleHidden");
+    isElementVisible(container4) ? elem4.addClass("titleShow") : null;
 
-    let container5 = $('#contacto');
-    let elem5 = $("#contacto .titleHidden")
-    isElementVisible(container5) ? elem5.addClass('titleShow') : null; 
-  })
-});
-
-
-// validacion de el formulario
-
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    var forms = document.getElementsByClassName('needs-validation');
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        } else {
-          submited()
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+    let container5 = $("#contacto");
+    let elem5 = $("#contacto .titleHidden");
+    isElementVisible(container5) ? elem5.addClass("titleShow") : null;
+  });
+})(
+  // validacion de el formulario
+  function () {
+    "use strict";
+    window.addEventListener(
+      "load",
+      function () {
+        var forms = document.getElementsByClassName("needs-validation");
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              } else {
+                submited();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      },
+      false
+    );
+  }
+)();
 
 function submited() {
   var form = document.querySelector("#contacto form");
-  var data = serialize(form)
+  var data = serialize(form);
   postAjax(
     "https://www.infocasas.com.uy/?mid=formulario&func=ajax_save",
     data,
@@ -308,11 +311,12 @@ function submited() {
       var anchor = document.querySelector("#contacto .left");
       var myText = document.createElement("h3");
       form.style = "display:none";
-      myText.innerHTML = "¡Consulta enviada con éxito!<br />En breve un asesor se comunicará contigo.";
+      myText.innerHTML =
+        "¡Consulta enviada con éxito!<br />En breve un asesor se comunicará contigo.";
       anchor.appendChild(myText);
-     
+      myText.setAttribute("id", "submitedForm");
     }
-  ) 
+  );
 }
 
 function serialize(form) {

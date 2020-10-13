@@ -1,162 +1,161 @@
 // --------------------------Map--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgMap'),
-  renderer: 'svg',
+  container: document.getElementById("imgMap"),
+  renderer: "svg",
   loop: false,
   autoplay: false,
-  path: 'assets/json/map/data.json',
+  path: "assets/json/map/data.json",
   name: "map"
 });
 
-$(window).on("scroll" ,function() {
-	let elem = $('#imgMap')
-	let scroll = $(window).scrollTop(); 
+$(window).on("scroll", function () {
+  let elem = $("#imgMap");
+  let scroll = $(window).scrollTop();
   let topElemD = elem.position().top - 110;
-  let heightElem = elem.height()
-  let total = topElemD - heightElem
-  let total2 = topElemD + heightElem
+  let heightElem = elem.height();
+  let total = topElemD - heightElem;
+  let total2 = topElemD + heightElem;
 
-  if (window.innerWidth > 991){
+  if (window.innerWidth > 991) {
     if (scroll > total) {
-      lottie.play("map")
+      lottie.play("map");
     } else {
-      lottie.stop("map")
+      lottie.stop("map");
     }
     if (scroll > total2) {
-      lottie.stop("map")
+      lottie.stop("map");
     }
   }
 
-  if (window.innerWidth < 992){
-    if (scroll > (total/1.2)) {
-      lottie.play("map")
+  if (window.innerWidth < 992) {
+    if (scroll > total / 1.2) {
+      lottie.play("map");
     }
-    if (scroll < (total/1.2)) {
-      lottie.stop("map")
+    if (scroll < total / 1.2) {
+      lottie.stop("map");
     }
     if (scroll > total2) {
-      lottie.stop("map")
+      lottie.stop("map");
     }
   }
-})
+});
 
 // --------------------------Ubucation--------------------------
 
 lottie.loadAnimation({
-  container: document.getElementById('ubication'),
-  renderer: 'svg',
+  container: document.getElementById("ubication"),
+  renderer: "svg",
   loop: false,
   autoplay: false,
-  path: 'assets/json/ubication/data.json',
+  path: "assets/json/ubication/data.json",
   name: "ubication"
 });
 
-$(window).on("scroll" ,function() {
-	let elem = $('#project')
-	let viewScrollTop = $(window).scrollTop(); 
+$(window).on("scroll", function () {
+  let elem = $("#project");
+  let viewScrollTop = $(window).scrollTop();
   let topElemD = elem.position().top;
-  let heightElem = elem.height()
-  let total = topElemD - heightElem
-  let total2 = topElemD + heightElem
+  let heightElem = elem.height();
+  let total = topElemD - heightElem;
+  let total2 = topElemD + heightElem;
 
   if (viewScrollTop > total) {
-  	lottie.play("ubication")
-  	
+    lottie.play("ubication");
   } else {
-  	lottie.stop("ubication")
+    lottie.stop("ubication");
   }
 
   if (viewScrollTop > total2) {
-  	lottie.stop("ubication")
+    lottie.stop("ubication");
   }
-})
+});
 
 // --------------------------piscina--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgpiscina'),
-  renderer: 'svg',
+  container: document.getElementById("imgpiscina"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/piscina/data.json',
+  path: "assets/json/piscina/data.json",
   name: "piscina"
 });
 
 // --------------------------Quicho--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgquincho'),
-  renderer: 'svg',
+  container: document.getElementById("imgquincho"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/quincho/data.json',
+  path: "assets/json/quincho/data.json",
   name: "quincho"
 });
 
 // --------------------------zen--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgzen'),
-  renderer: 'svg',
+  container: document.getElementById("imgzen"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/zen/data.json',
+  path: "assets/json/zen/data.json",
   name: "zen"
 });
 
 // --------------------------wifi--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgwifi'),
-  renderer: 'svg',
+  container: document.getElementById("imgwifi"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/wifi/data.json',
+  path: "assets/json/wifi/data.json",
   name: "wifi"
 });
 
 // --------------------------buzon--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgbuzon'),
-  renderer: 'svg',
+  container: document.getElementById("imgbuzon"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/buzon/data.json',
+  path: "assets/json/buzon/data.json",
   name: "buzon"
 });
 
 // --------------------------cargador--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgcargador'),
-  renderer: 'svg',
+  container: document.getElementById("imgcargador"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/cargador/data.json',
+  path: "assets/json/cargador/data.json",
   name: "cargador"
 });
 
 // --------------------------recepcion--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgrecepcion'),
-  renderer: 'svg',
+  container: document.getElementById("imgrecepcion"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/recepcion/data.json',
+  path: "assets/json/recepcion/data.json",
   name: "recepcion"
 });
 
 // --------------------------luggage--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgluggage'),
-  renderer: 'svg',
+  container: document.getElementById("imgluggage"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/luggage/data.json',
+  path: "assets/json/luggage/data.json",
   name: "luggage"
 });
 
 // --------------------------toalla--------------------------
 lottie.loadAnimation({
-  container: document.getElementById('imgtoalla'),
-  renderer: 'svg',
+  container: document.getElementById("imgtoalla"),
+  renderer: "svg",
   loop: true,
   autoplay: true,
-  path: 'assets/json/toalla/data.json',
+  path: "assets/json/toalla/data.json",
   name: "toalla"
 });
