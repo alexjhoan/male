@@ -272,9 +272,10 @@ $(function () {
     let elem5 = $("#contacto .titleHidden");
     isElementVisible(container5) ? elem5.addClass("titleShow") : null;
   });
-})(
+});
+
   // validacion de el formulario
-  function () {
+(function () {
     "use strict";
     window.addEventListener(
       "load",
