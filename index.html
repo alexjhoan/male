@@ -47,14 +47,14 @@
       <div id="header">
         <div id="header2"></div>
         <div class="container">
-        <img src="assets/images/5off.png" alt="5off" class="off5"> 
+        <!-- <img src="assets/images/5off.png" alt="5off" class="off5">  -->
           <div class="row">
             <div class="col-12 centerContainer">
               <img src="assets/images/ultima_oportunidad.png" alt="">
               <p class="h3">
-                ¡Solo 4 unidades disponibles!
+                ¡ÚLTIMAS 3 UNIDADES!
               </p>
-              <a id="bannerBtn" class="btn btn-primary mt-4" href="#contacto">Registrarme</a>
+              <a id="bannerBtn" class="btn btn-primary mt-4" href="#contacto">Consultar</a>
             </div>
           </div>
         </div>
@@ -67,15 +67,26 @@
     </div>
     <header>
       <div class="containerHeader">
-        <a href="/" class="logo"><img src="assets/images/logo.png" alt="Male" /></a>
-        <nav id="desktopMenu"><a href="#subHeader" class="menu-item">Proyecto</a> <a href="#project" class="menu-item">Ubicación</a> <a href="#units" class="menu-item">Unidades</a> <a href="#contacto" class="menu-item">Contacto</a></nav>
+        <a href="/" class="logo">
+          <img src="assets/images/icons/logo.svg" alt="Male" />
+        </a>
+        <nav id="desktopMenu">
+          <a href="#subHeader" class="menu-item">Proyecto</a>
+          <a href="#project" class="menu-item">Ubicación</a>
+          <a href="#units" class="menu-item">Unidades</a>
+          <a href="#contacto" class="menu-item">Contacto</a>
+        </nav>
         <div id="burger">
           <div></div>
           <div></div>
           <div></div>
         </div>
       </div>
-      <nav id="menu"><a href="#subHeader" class="menu-item">Proyecto</a> <a href="#project" class="menu-item">Ubicación</a> <a href="#units" class="menu-item">Unidades</a> <a href="#contacto" class="menu-item">Contacto</a></nav>
+      <nav id="menu"><a href="#subHeader" class="menu-item">Proyecto</a>
+        <a href="#project" class="menu-item">Ubicación</a>
+        <a href="#units" class="menu-item">Unidades</a>
+        <a href="#contacto" class="menu-item">Contacto</a>
+      </nav>
     </header>
     <section id="subHeader">
       <div id="waves"></div>
@@ -326,12 +337,20 @@
             <p class="h1">Dejanos tu consulta</p>
             <form novalidate class="needs-validation" action="javascript:void(0);">
               <div class="form-group">
-                <input type="hidden" class="form-control" name="IDform" value="447" /> <input type="hidden" class="form-control" name="IDpais" value="2" /> <input type="hidden" class="form-control" name="fecha" id="inputFecha" />
+                <input type="hidden" class="form-control" name="IDform" value="447" />
+                <input type="hidden" class="form-control" name="IDpais" value="2" />
+                <input type="hidden" class="form-control" name="fecha" id="inputFecha" />
                 <input type="text" class="form-control" name="nombre" placeholder="Nombre *" required />
               </div>
-              <div class="form-group"><input type="email" class="form-control" name="email" placeholder="Email *" required /></div>
-              <div class="form-group"><input type="tel" class="form-control" name="tel" placeholder="Teléfono *" required /></div>
-              <div class="form-group"><textarea name="extra" class="form-control" placeholder="Consulta *" rows="5" required></textarea></div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email *" required />
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" name="tel" placeholder="Teléfono *" required />
+              </div>
+              <div class="form-group">
+                <textarea name="extra" class="form-control" placeholder="Consulta *" rows="5" required></textarea>
+              </div>
               <button type="submit" class="submit btn btn-primary">Enviar</button>
             </form>
           </div>
@@ -343,7 +362,10 @@
           </div>
         </div>
         <div class="row footer">
-          <div class="col-12"><img src="assets/images/male-white.png" alt="Male Asunción" /> <img src="assets/images/continents.png" alt="Continents" /></div>
+          <div class="col-12">
+            <img src="assets/images/male-white.svg" alt="Male Asunción" />
+            <img src="assets/images/continents.svg" alt="Continents" />
+          </div>
         </div>
       </div>
     </section>
