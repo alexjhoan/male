@@ -7,17 +7,6 @@ $('[data-fancybox="gallery"]').fancybox({
   buttons: ["zoom", "close"]
 });
 
-// OwlCarousel
-
-$(document).ready(function () {
-  $(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    dots: true,
-    nav: true,
-    items: 1
-  });
-});
 
 // -----------------------Banner-Parallax----------------------
 
@@ -403,3 +392,96 @@ function toggleMenu() {
   const element = document.getElementById("menu");
   element.classList.toggle("show");
 }
+
+
+function autoProgress(dateInit, dateEnd, IdProgress, IdImpPercentage) {
+  let nowDate = new Date().getTime();
+  let initDate = new Date(dateInit).getTime();
+  let endDate = new Date(dateEnd).getTime();
+  let width = $(`#${IdProgress}`)
+  if ((nowDate > initDate) && (nowDate < endDate)) {
+    let progress = ((nowDate - initDate) / (endDate - initDate)) * 100
+    $(width).css('width', `${Math.ceil(progress)}%`);
+    $('#textBuild').html(`Construido`)
+    $(`#${IdImpPercentage}`).html(`${Math.ceil(progress)}%`)
+  } else if(nowDate < initDate){
+    $(width).css('width', '1%');
+  } else if (nowDate > endDate) {
+    $(width).css('width', '100%');
+  }
+}
+
+
+//---------------------------------Gallery-Advance----------------------------------
+
+if (screen.width > 768){
+  $("#lightgallery").lightGallery();
+  const items =  $('#lightgallery a').length;
+  let shown = screen.width < 992 ? 8 : 10
+  let showItems = $('#lightgallery a:visible').length+shown;
+  $('#lightgallery a:lt('+shown+')').show();
+  if(showItems >= items) {
+    $('.btnMore').fadeOut(500);
+  }
+  function seeMore() {
+    $('#lightgallery a:lt('+showItems+')').fadeIn(1000);
+    if(showItems >= items) {
+      $('.btnMore').fadeOut(500);
+    }
+  }
+}  else {
+  $("#lightgallery").addClass("owl-carousel owl-theme")
+  $("#lightgallery").lightGallery();
+  $('#advance .owl-carousel').owlCarousel({
+    loop:false,
+    margin:15,
+    nav:false,
+    dots: true,
+    responsive:{
+      0:{
+        items:1
+      },
+      575:{
+        items:2
+      },
+    }
+  })
+}
+
+$(document).ready(function () {
+  autoProgress('2020/12/01', '2023/04/01', 'progressBar', 'IdImpPercentage')
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: true,
+    nav: true,
+    items: 1
+  });
+});
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'doughnut',
+
+    // The data for our dataset
+    data: {
+        labels: ['Vendido', 'No Vendido'],
+        datasets: [{
+            label: ['80%','20%'],
+            backgroundColor: ['#569894','#cecece'],
+            borderColor: '#cecece',
+            borderWidth: 0,
+            data: [80,20],
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+      cutoutPercentage: 65,
+      tooltips: false,
+        legend: {
+            display: false,
+        }
+    }
+});

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
+    <!-- <script>
       (function (w, d, s, l, i){w[l]=w[l] || [] w[l].push({"gtm.start": new Date().getTime(), event: "gtm.js"}) var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l !="dataLayer" ? "&l=" + l : "" j.async=true j.src="https://www.googletagmanager.com/gtm.js?id=" + i + dl f.parentNode.insertBefore(j, f)})(window, document, "script", "dataLayer", "GTM-5CSHQRF");
-    </script>
+    </script> -->
     <!-- Facebook Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="assets/js/owl-carousel/owl.carousel.min.css" />
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/ui-darkness/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/js/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/js/lightgallery/css/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/animations.min.css" />
   </head>
@@ -47,14 +48,15 @@
       <div id="header">
         <div id="header2"></div>
         <div class="container">
-        <!-- <img src="assets/images/5off.png" alt="5off" class="off5">  -->
           <div class="row">
-            <div class="col-12 centerContainer">
-              <img src="assets/images/ultima_oportunidad.png" alt="">
-              <p class="h3">
-                ¡ÚLTIMAS 3 UNIDADES!
-              </p>
-              <a id="bannerBtn" class="btn btn-primary mt-4" href="#contacto">Consultar</a>
+            <div class="col-12">
+              <div class="titleBanner animate__animated animate__fadeInLeft animate__delay-1s">
+                <p>Torre Firenze. Montevideo, Uruguay</p>
+                <p>¡Obra iniciada!</p>
+                <div class="dividerLine"></div>
+                <p>INVERTÍ EN EL PRIMER PROYECTO<br class="d-none d-sm-block" />DESARROLLADO CON BIG DATA<br class="d-none d-sm-block" />EN URUGUAY</p>
+                <a href="#contact" class="btn btn-primary">Más información</a>
+              </div>
             </div>
           </div>
         </div>
@@ -221,6 +223,14 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 footer animate__animated aniUp animate__delay-1s">
+            <div>
+              <canvas id="myChart"></canvas>
+              <p class="titleFoo">80%<br /><span class="h3">VENDIDO</span></p>
+            </div>
             <p class="h3 text-center mb-4">¡Consultá precios y disponibilidad!</p>
             <p class="text-center"><a class="btn btn-primary" href="#contacto">Quiero más información</a></p>
           </div>
@@ -329,6 +339,65 @@
         </div>
       </div>
     </section>
+    <section id="presale">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 animate__animated aniUp mx-auto">
+            <div class="progressTop">
+              <img src="assets/icons/grua.png" alt="grua">
+              <p class="text">Avance de obra</p>
+              <img src="assets/icons/entrega.png" alt="entrega">
+            </div>
+            <div class="progress mx-auto">
+              <div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progressBottom">
+              <p><span id="textBuild">Inicio de obra</span><br /><span id="IdImpPercentage" class="strong">Abril 2021</span></p>
+              <p class="ml-auto text-end">Entrega<br /><span class="strong">Abril 2023</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="advance">
+      <div id="lightgallery" class="wow slideInUp">
+        <a href="assets/images/gallery/jul2021-4.jpg">
+          <img src="assets/images/gallery/jul2021-4.jpg" />
+          <span>Julio 2021</span>
+        </a>
+        <a href="assets/images/gallery/jul2021-3.jpg">
+          <img src="assets/images/gallery/jul2021-3.jpg" />
+          <span>Julio 2021</span>
+        </a>
+        <a href="assets/images/gallery/jul2021-2.jpg">
+          <img src="assets/images/gallery/jul2021-2.jpg" />
+          <span>Julio 2021</span>
+        </a>
+        <a href="assets/images/gallery/jul2021-1.jpg">
+          <img src="assets/images/gallery/jul2021-1.jpg" />
+          <span>Julio 2021</span>
+        </a>
+        <a href="assets/images/gallery/may2021.jpg">
+          <img src="assets/images/gallery/may2021.jpg" />
+          <span>Mayo 2021</span>
+        </a>
+        <a href="assets/images/gallery/abr2021.jpg">
+          <img src="assets/images/gallery/abr2021.jpg" />
+          <span>Abril 2021</span>
+        </a>
+        <a href="assets/images/gallery/feb2021.jpg">
+          <img src="assets/images/gallery/feb2021.jpg" />
+          <span>Febrero 2021</span>
+        </a>
+        <a href="assets/images/gallery/dic2020.jpg">
+          <img src="assets/images/gallery/dic2020.jpg" />
+          <span>Diciembre 2020</span>
+        </a>
+      </div>
+      <div class="btnMore">
+        <button class="btn btn-primary more" onclick="seeMore()">Ver más</button>
+      </div>
+    </section>
     <section id="contacto">
       <div id="waves2"></div>
       <div class="container">
@@ -375,6 +444,8 @@
     <script src="assets/js/fancy-box/jquery.fancybox.min.js"></script>
     <script src="assets/js/lottie.min.js"></script>
     <script src="assets/js/bodymovin.min.js"></script>
-    <script src="assets/js/index.min.js"></script>
+    <script type="text/javascript" src="assets/js/lightgallery/js/lightgallery.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
     :root {
     --primary: #47b4a9;
     --secondary: #033545;
@@ -60,13 +61,11 @@ img {
 }
 .titleHidden {
     opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
 }
 .titleShow {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-transition: ease-in-out 1s;
@@ -79,7 +78,7 @@ html {
     scroll-behavior: smooth;
 }
 header {
-	position: fixed;
+  position: fixed;
     top: 0;
     width: 100%;
     height: 70px;
@@ -200,7 +199,6 @@ header nav a:hover {
 #BannerContainer #header2 {
     position: fixed;
     opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     height: 100vh;
@@ -213,39 +211,47 @@ header nav a:hover {
 }
 
 #BannerContainer .centerContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-top: 60px;
 }
 
-#BannerContainer .centerContainer img {
-  width: 70%;
-  max-width: 500px;
-  margin-bottom: 30px;
+#BannerContainer .titleBanner p {
+color: #fff;
+margin: 0;
+font-size: 1.25rem;
+line-height: 1.1;
 }
 
-#BannerContainer img.off5 {
-  position: absolute;
-  right: 0;
-  top: 70px;
-  z-index: 2;
-  width: 25%;
-  max-width: 170px;
+#BannerContainer .titleBanner p:first-of-type {
+padding-top: 10vh;
+padding-bottom: 20px;
 }
 
-#header p {
-    color: #fff;
-    font-weight: 700;
-    font-style: normal;
-    text-align: center;
+#BannerContainer .titleBanner p:nth-of-type(2) {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: 'Raleway';
 }
+
+#BannerContainer .titleBanner button {
+margin-top: 35px;
+}
+
+#BannerContainer a.btn.btn-primary {
+margin-top: 3%;
+}
+
+#BannerContainer .titleBanner .dividerLine {
+border-bottom: solid 1px #fff;
+margin: 20px 0;
+max-width: 100px;
+}
+
 div#whatsappBtn{
-	position: fixed;
-	bottom: 0;
-	right: 10px;
-	z-index: 10;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  z-index: 10;
 }
 div#whatsappBtn a {
     display: -webkit-box;
@@ -667,6 +673,142 @@ section#amenities .facilities {
 #rental .rental .rentalImg .item:last-child p {
     margin-left: 10px;
 }
+
+#units .footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#units .footer div:first-child{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+#units .footer p.titleFoo{
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 2.2rem;
+  margin: 0;
+}
+
+#units .footer p.titleFoo span{
+  font-weight: 400;
+  margin: 0;
+}
+
+#units .footer div:first-child img{
+  height: auto;
+  width: 82px;
+  margin-right: 15px;
+}
+
+#units .footer p.h3 {
+  font-style: italic;
+}
+
+#units canvas#myChart {
+  width: 170px!important;
+  height: auto!important;
+  margin-right: -25px;
+}
+
+/*-----------------------------presale-------------------------------*/
+
+#presale {
+  background-color: #fff;
+  padding: 15vh 0 13vh;
+}
+
+#presale .progressTop {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+}
+
+#presale .progressTop img {
+  height: 70px;
+}
+
+#presale .progressTop .text {
+  font-size: 2.5rem;
+  margin: 0;
+  line-height: 2rem;
+}
+
+#presale .progress {
+  height: 43px;
+  background-color: #EBEBEB;
+  border-radius: 22px;
+  margin: 18px 0;
+}
+
+#presale .progress-bar {
+  background-color: #27ac2c;
+}
+
+#presale .progressBottom {
+  display: flex;
+  flex-direction: row;
+}
+
+#presale .progressBottom p, #presale .progressBottom p span {
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin: 0;
+}
+
+/*----------------------------Advance-------------------------------*/
+
+section#advance{
+  padding: 0;
+}
+section#advance .left .h2{
+  text-align: right;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+section#advance #lightgallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0.5%;
+}
+#advance #lightgallery a{
+  display: none;
+  overflow: hidden;
+  margin-top: 2%;
+  position: relative;
+}
+#advance #lightgallery a img {
+  transition: all .5s ease;
+  width: 100%;
+}
+#advance #lightgallery a span {
+  left: 15px;
+  top: 15px;
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  background: #D25941;
+  padding: 5px 24px;
+  border-radius: 30px;
+  box-shadow: 0 3px 6px #00000030;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+#advance #lightgallery a:hover img {
+  transform: scale(1.07);
+}
+#advance .btnMore{
+  text-align: center;
+  margin-top: 30px;
+}
+
 #contacto {
     position: relative;
     z-index: 0;
@@ -803,6 +945,30 @@ section#contacto:before {
     :root {
     font-size: 12px;
 }
+#presale .progressTop img {
+  height: 70px;
+}
+
+#presale .progressBottom p {
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+
+#presale .progress {
+    height: 40px;
+    margin: 15px 0;
+}
+
+#presale .progressTop .text p {
+    font-size: 1.25rem;
+}
+
+#presale .progressTop .text p span {
+    font-size: 1rem;
+}
+section#advance #lightgallery {
+  grid-template-columns: repeat(4, 1fr);
+}
 header {
     height: 50px;
 }
@@ -831,7 +997,6 @@ header nav#menu {
     border-bottom: solid 3px var(--primary);
     z-index: 9;
     opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     -webkit-transform: translateY(-250px);
     transform: translateY(-250px);
     -webkit-transition: cubic-bezier(1, 0, 1, 1) 0.8s;
@@ -839,7 +1004,6 @@ header nav#menu {
 }
 header nav#menu.show {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-transition: cubic-bezier(0, 0, 0.2, 1) 1s;
@@ -926,6 +1090,24 @@ header nav a {
     width: auto;
 }
 }@media (max-width:767.98px) {
+  
+  section#advance {
+    padding: 8vh 0 0vh;
+  }
+  section#advance .left .h2{
+    text-align: center;
+  }
+  section#advance #lightgallery {
+    display: block;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  #advance #lightgallery a{
+    display: block;
+  }
+  #advance .btnMore{
+    display: none;
+  }
     #subHeader {
     background-size: 300%}
 #project .projectText {
@@ -998,6 +1180,9 @@ header nav a {
     height: 30px;
 }
 }@media (max-width:575.98px) {
+  #presale .progressTop .text {
+    font-size: 1.5rem;
+  }
     h1, p.h1 {
     font-size: 2rem !important;
 }
