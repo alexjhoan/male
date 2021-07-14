@@ -417,7 +417,7 @@ function autoProgress(dateInit, dateEnd, IdProgress, IdImpPercentage) {
 if (screen.width > 768){
   $("#lightgallery").lightGallery();
   const items =  $('#lightgallery a').length;
-  let shown = screen.width < 992 ? 8 : 10
+  let shown = 8
   let showItems = $('#lightgallery a:visible').length+shown;
   $('#lightgallery a:lt('+shown+')').show();
   if(showItems >= items) {
