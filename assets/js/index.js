@@ -449,7 +449,7 @@ if (screen.width > 768){
 }
 
 $(document).ready(function () {
-  autoProgress('2020/12/01', '2023/04/01', 'progressBar', 'IdImpPercentage')
+  autoProgress('2020/05/15', '2023/04/01', 'progressBar', 'IdImpPercentage')
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
