@@ -215,22 +215,24 @@ header nav a:hover {
 }
 
 #BannerContainer .titleBanner p {
-color: #fff;
-margin: 0;
-font-size: 1.25rem;
-line-height: 1.1;
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 #BannerContainer .titleBanner p:first-of-type {
-padding-top: 10vh;
-padding-bottom: 20px;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: 'Raleway';
 }
 
 #BannerContainer .titleBanner p:nth-of-type(2) {
-  font-size: 3.5rem;
-  line-height: 1.1;
+  font-size: 1.5rem;
+  line-height: 1.5;
   font-weight: 300;
-  font-family: 'Raleway';
+  margin-bottom: 8px;
 }
 
 #BannerContainer .titleBanner button {
