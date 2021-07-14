@@ -223,7 +223,7 @@ header nav a:hover {
 
 #BannerContainer .titleBanner p:first-of-type {
   font-size: 3.5rem;
-  line-height: 1.5;
+  line-height: 1.1;
   font-weight: 300;
   font-family: 'Raleway';
 }
@@ -796,7 +796,7 @@ section#advance #lightgallery {
   position: absolute;
   z-index: 2;
   color: #fff;
-  background: #D25941;
+  background: var(--primary);
   padding: 5px 24px;
   border-radius: 30px;
   box-shadow: 0 3px 6px #00000030;
@@ -1182,6 +1182,9 @@ header nav a {
     height: 30px;
 }
 }@media (max-width:575.98px) {
+    #BannerContainer .titleBanner{
+        padding-left: 4%;
+    }
   #presale .progressTop .text {
     font-size: 1.5rem;
   }
