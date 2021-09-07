@@ -412,22 +412,23 @@ function autoProgress(dateInit, dateEnd, IdProgress, IdImpPercentage) {
 
 //---------------------------------Gallery-Advance----------------------------------
 
-if (screen.width > 768){
+if (screen.width > 991){
   $("#lightgallery").lightGallery();
   const items =  $('#lightgallery a').length;
-  let shown = 8
-  let showItems = $('#lightgallery a:visible').length+shown;
-  $('#lightgallery a:lt('+shown+')').show();
-  if(showItems >= items) {
-    $('.btnMore').fadeOut(500);
+  const imgInit = 8
+  const ImgMore = 4
+  $('#lightgallery a:lt('+imgInit+')').show();
+  if(imgInit >= items) {
+    $('.btnMore').hide()
   }
   function seeMore() {
-    $('#lightgallery a:lt('+showItems+')').fadeIn(1000);
-    if(showItems >= items) {
-      $('.btnMore').fadeOut(500);
+    let visibleItems = $('#lightgallery a:visible').length + ImgMore
+    $('#lightgallery a:lt('+visibleItems+')').fadeIn(800);
+    if(visibleItems >= items) {
+      $('.btnMore').hide();
     }
   }
-}  else {
+} else {
   $("#lightgallery").addClass("owl-carousel owl-theme")
   $("#lightgallery").lightGallery();
   $('#advance .owl-carousel').owlCarousel({
