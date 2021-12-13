@@ -219,7 +219,7 @@ function bg_contacto() {
 function isElementVisible(container) {
   let viewScrollTop = $(window).scrollTop(); // distancia de scroll superior
   let viewBottom = viewScrollTop + $(window).height(); // distancia de scroll + el alto actual de window (lo no visible por scroll + lo visible)
-  let topElemD = $(container).offset().top + 250; // distancia desde el elemento hasta el tope superior del viewport
+  let topElemD = $(container).offset().top + 250; // distancia desde el elemento hasta el tope superior del viewport prueba despues eliminar
   return topElemD < viewBottom;
 }
 
@@ -393,7 +393,6 @@ function toggleMenu() {
   element.classList.toggle("show");
 }
 
-
 function autoProgress(dateInit, dateEnd, IdProgress, IdImpPercentage) {
   let nowDate = new Date().getTime();
   let initDate = new Date(dateInit).getTime();
@@ -411,25 +410,25 @@ function autoProgress(dateInit, dateEnd, IdProgress, IdImpPercentage) {
   }
 }
 
-
 //---------------------------------Gallery-Advance----------------------------------
 
-if (screen.width > 768){
+if (screen.width > 991){
   $("#lightgallery").lightGallery();
   const items =  $('#lightgallery a').length;
-  let shown = screen.width < 992 ? 8 : 10
-  let showItems = $('#lightgallery a:visible').length+shown;
-  $('#lightgallery a:lt('+shown+')').show();
-  if(showItems >= items) {
-    $('.btnMore').fadeOut(500);
+  const imgInit = 8
+  const ImgMore = 4
+  $('#lightgallery a:lt('+imgInit+')').show();
+  if(imgInit >= items) {
+    $('.btnMore').hide()
   }
   function seeMore() {
-    $('#lightgallery a:lt('+showItems+')').fadeIn(1000);
-    if(showItems >= items) {
-      $('.btnMore').fadeOut(500);
+    let visibleItems = $('#lightgallery a:visible').length + ImgMore
+    $('#lightgallery a:lt('+visibleItems+')').fadeIn(800);
+    if(visibleItems >= items) {
+      $('.btnMore').hide();
     }
   }
-}  else {
+} else {
   $("#lightgallery").addClass("owl-carousel owl-theme")
   $("#lightgallery").lightGallery();
   $('#advance .owl-carousel').owlCarousel({
@@ -449,7 +448,7 @@ if (screen.width > 768){
 }
 
 $(document).ready(function () {
-  autoProgress('2020/12/01', '2023/04/01', 'progressBar', 'IdImpPercentage')
+  autoProgress('2020/11/01', '2022/08/01', 'progressBar', 'IdImpPercentage')
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,

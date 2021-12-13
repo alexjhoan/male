@@ -1,5 +1,5 @@
 @import "fonts.css";
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
     :root {
     --primary: #47b4a9;
     --secondary: #033545;
@@ -215,22 +215,24 @@ header nav a:hover {
 }
 
 #BannerContainer .titleBanner p {
-color: #fff;
-margin: 0;
-font-size: 1.25rem;
-line-height: 1.1;
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 #BannerContainer .titleBanner p:first-of-type {
-padding-top: 10vh;
-padding-bottom: 20px;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 300;
+  font-family: 'Raleway';
 }
 
 #BannerContainer .titleBanner p:nth-of-type(2) {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  font-weight: 700;
-  font-family: 'Raleway';
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 8px;
 }
 
 #BannerContainer .titleBanner button {
@@ -775,7 +777,7 @@ section#advance .left .h2{
 }
 section#advance #lightgallery {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 0.5%;
 }
 #advance #lightgallery a{
@@ -794,7 +796,7 @@ section#advance #lightgallery {
   position: absolute;
   z-index: 2;
   color: #fff;
-  background: #D25941;
+  background: var(--primary);
   padding: 5px 24px;
   border-radius: 30px;
   box-shadow: 0 3px 6px #00000030;
@@ -806,7 +808,7 @@ section#advance #lightgallery {
 }
 #advance .btnMore{
   text-align: center;
-  margin-top: 30px;
+  margin: 30px 0 20px;
 }
 
 #contacto {
@@ -1180,6 +1182,9 @@ header nav a {
     height: 30px;
 }
 }@media (max-width:575.98px) {
+    #BannerContainer .titleBanner{
+        padding-left: 4%;
+    }
   #presale .progressTop .text {
     font-size: 1.5rem;
   }
