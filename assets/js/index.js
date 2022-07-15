@@ -475,7 +475,7 @@ var chart = new Chart(ctx, {
             backgroundColor: ['#569894','#cecece'],
             borderColor: '#cecece',
             borderWidth: 0,
-            data: [80,20],
+            data: [87,13],
         }]
     },
 
