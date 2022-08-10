@@ -796,6 +796,8 @@ section#advance #lightgallery {
 #advance #lightgallery a img {
   transition: all .5s ease;
   width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 #advance #lightgallery a span {
   left: 15px;
