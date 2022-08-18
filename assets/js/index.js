@@ -1,5 +1,5 @@
 $(window).on('load', function () {
-  $('#page').delay(100).css('opacity', '1');
+  $('body').css('opacity', '1');
 });
 
 // fancyBox

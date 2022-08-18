@@ -13,6 +13,9 @@
     padding: 0;
     text-decoration: none;
 }
+body{
+    opacity: 0;
+}
 h1, p.h1 {
     font-family: "Roboto";
     font-size: 35.2px;
