@@ -259,6 +259,63 @@ margin: 20px 0;
 max-width: 100px;
 }
 
+
+
+#BannerContainerB{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(90deg, #00000080 0%, #00000042 50%, #00000000 100%),url("https://cdn1.infocasas.com.uy/web/63496f1eaa306_banner-male.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#BannerContainer .centerContainer {
+  padding-top: 60px;
+}
+#BannerContainerB .titleBanner p {
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#BannerContainerB .titleBanner h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+#BannerContainerB .titleBanner p:first-of-type {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 300;
+  font-family: 'Raleway';
+}
+
+#BannerContainerB .titleBanner p:nth-of-type(2) {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+#BannerContainerB .titleBanner button {
+margin-top: 35px;
+}
+
+#BannerContainerB a.btn.btn-primary {
+margin-top: 2%;
+}
+
+#BannerContainerB .titleBanner .dividerLine {
+border-bottom: solid 1px #fff;
+margin: 20px 0;
+max-width: 100px;
+}
 div#whatsappBtn{
   position: fixed;
   bottom: 0;
@@ -327,7 +384,7 @@ div#whatsappBtn a span {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    margin-top: 205vh;
+/*    margin-top: 205vh;*/
     background-image: url("../images/water.jpg");
     background-repeat: no-repeat;
     background-size: 200%}
@@ -775,7 +832,7 @@ section#amenities .facilities {
   margin: 0;
 }
 
-/*----------------------------Advance-------------------------------*/
+/*//----------------------------Advance-------------------------------*/
 
 section#advance{
   padding: 0;
