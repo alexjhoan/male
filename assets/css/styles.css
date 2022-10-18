@@ -755,7 +755,7 @@ section#amenities .facilities {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  margin-bottom: 40px;
+  margin: 0;
 }
 
 #units .footer p.titleFoo{
